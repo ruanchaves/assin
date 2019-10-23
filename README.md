@@ -39,6 +39,6 @@ Until then, you may cite this very repository:
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/ruanchaves/assin}},
-  commit = {f04eb9f3e61cd71676017d1b4fc161e576e2c36a}
+  commit = {f8c3f185fb3bcd106c8a0e5a12d9ef2c6119ec74}
 }
 ```
