@@ -20,7 +20,7 @@ if __name__ == '__main__':
     ensemble_data = data['ensemble']
     submission_data = data['submission']
 
-    # assin_json_reader(conv_data)
-    # parallel_train(train_data, workers=WORKERS)
-    # load_ensemble(ensemble_data)
+    assin_json_reader(conv_data)
+    parallel_train(train_data, workers=WORKERS)
+    load_ensemble(ensemble_data)
     assin_json_writer(submission_data)
