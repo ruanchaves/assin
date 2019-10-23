@@ -7,6 +7,8 @@ that happened in 2019 during the [Symposium in Information and Human Language Te
 
 It achieved the best results among all submissions for the entailment task.
 
+You may also want to read the current version of [our presentation slides](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf). 
+
 ## Installation
 
 In order to reproduce our results, simply execute the commands below:
@@ -38,7 +40,7 @@ Until then, you may cite this very repository:
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/ruanchaves/urlgoeshere}},
+  howpublished = {\url{https://github.com/ruanchaves/assin}},
   commit = {commitidgoeshere}
 }
 ```
