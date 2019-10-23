@@ -5,7 +5,7 @@ This repository hosts the code for the model that has been submitted by the Deep
 [II Evaluation of Semantic Textual Similarity and Textual Inference in Portuguese](https://sites.google.com/view/assin2/english) 
 that happened in 2019 during the [Symposium in Information and Human Language Technology](http://comissoes.sbc.org.br/ce-pln/stil2019/).
 
-It achieved the best results among all submissions made to the entailment task.
+It achieved the best results among all submissions for the entailment task.
 
 ## Installation
 
