@@ -34,7 +34,7 @@ Until then, you may cite this very repository:
 ```
 @misc{Rodrigues2019,
   author = {Rodrigues, R.C.},
-  title = {Project Title},
+  title = {ASSIN},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
