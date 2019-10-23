@@ -23,7 +23,7 @@ python assin-eval.py  assin2-test.xml ./submission/assin2/submission.xml
 
 Depending on your resources you may want to edit `settings.json` and increase the amount of workers. Generally speaking, each worker will consume around 8 gigabytes of GPU memory. 
 
-Increasing both the `buckets` and `kfold_buckets` parameters by the same amount on the `settings.json` file is expected to increase the accuracy of the model, although it will also proportionately increase the training time.
+Increasing both the `buckets` and `kfold_buckets` parameters on the `settings.json` file by the same amount is expected to increase the accuracy of the model, although it will also proportionately increase the training time.
 
 
 ## Citation
