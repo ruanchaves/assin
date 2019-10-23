@@ -1,4 +1,15 @@
-# assin_roberta
+ASSIN 2
+=================
+
+This repository hosts the code for the model that has been submitted by the Deep Learning Brasil team to the 
+[II Evaluation of Semantic Textual Similarity and Textual Inference in Portuguese](https://sites.google.com/view/assin2/english) 
+that happened in 2019 during the [Symposium in Information and Human Language Technology](http://comissoes.sbc.org.br/ce-pln/stil2019/).
+
+It achieved the best results among all submissions made to the entailment task.
+
+## Installation
+
+In order to reproduce our results, simply execute the commands below:
 
 ```
 python3.6 -m venv assin2_env
@@ -6,4 +17,28 @@ source assin2_env/bin/activate
 pip install -r requirements.txt
 python assin-roberta.py settings.json
 python assin-eval.py  assin2-test.xml ./submission/assin2/submission.xml
+```
+
+Depending on your resources you may want to edit `settings.json` and increase the amount of workers. Generally speaking, each worke
+will consume around 8 gigabytes of GPU memory. 
+
+Increasing both the `buckets` and `kfold_buckets` parameters by the same amount on the `settings.json` file is expected to increase
+the accuracy of the model, although it will also proportionately increase the training time.
+
+
+## Citation
+
+A paper about our findings is planned to be released next year. 
+Until then, you may cite this very repository: 
+
+```
+@misc{Rodrigues2019,
+  author = {Rodrigues, R.C.},
+  title = {Project Title},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ruanchaves/urlgoeshere}},
+  commit = {commitidgoeshere}
+}
 ```
