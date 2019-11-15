@@ -3,7 +3,7 @@
     "conv": [
         {
             "path": [
-                "./sources/assin-ptbr-train.xml",
+                "./sources/assin2-train-only.xml",
                 "./sources/assin-ptbr-blind-test.xml"
             ],
             "translate": true,
@@ -49,7 +49,7 @@
         },
         {
             "path": [
-                "./sources/assin-ptbr-train.xml",
+                "./sources/assin2-train-only.xml",
                 "./sources/assin-ptbr-blind-test.xml"
             ],
             "translate": true,
@@ -95,7 +95,7 @@
         },
         {
             "path": [
-                "./sources/assin-ptbr-train.xml",
+                "./sources/assin2-train-only.xml",
                 "./sources/assin-ptbr-blind-test.xml"
             ],
             "translate": false,
@@ -140,7 +140,7 @@
 		},
 		{
 		    "path": [
-			"./sources/assin-ptbr-train.xml",
+			"./sources/assin2-train-only.xml",
 			"./sources/assin-ptbr-blind-test.xml"
 		    ],
 		    "translate": false,
