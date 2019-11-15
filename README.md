@@ -32,8 +32,8 @@ A paper about our findings is planned to be released next year.
 Until then, you may cite this very repository: 
 
 ```
-@misc{Rodrigues2019,
-  author = {Rodrigues, R.C.},
+@misc{rodrigues2019assin,
+  author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares},
   title = {ASSIN},
   year = {2019},
   publisher = {GitHub},
