@@ -19,17 +19,20 @@ def get_data(s1=None, s2=None, arr=None, query=[]):
         elif i1 == q2 and i2 == q1:
             return arr[idx]
     else:
+        print(query)
         raise ValueError('not found')
 
 def convert(source=None, 
             target=None, 
             entailment_array=None, 
             similarity_array=None,
-            df_source='/run/media/user/DADOS/competition/assin_roberta/datasets/pt/assin2/similarity/subset/dev.tsv'):
+            df_source=None,
+            convert_labels=True):
     
     entailment_dict = {
         0: 'None',
-        1: 'Entailment'
+        1: 'Entailment',
+        2: 'Paraphrase'
     }
 
     entailment_data = list(np.load(entailment_array))
@@ -53,27 +56,61 @@ def convert(source=None,
                                     arr=similarity_data, 
                                     query=[test,hypothesis])
 
-        pair.set('entailment', entailment_dict[round(entailment_score)])
+        if convert_labels == True:
+            pair.set('entailment', entailment_dict[round(entailment_score)])
+        else:
+            pair.set('entailment', str(entailment_score) )
         pair.set('similarity', str(similarity_score))
     xml_source.write(target)
 
-if __name__ == '__main__':
-    convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-ensemble-5fold-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/ensemble/assin2/entailment/subset/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/ensemble/assin2/similarity/subset/model_preds.npy"
-    )
-    convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-bert-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/pt/assin2/entailment/subset/original/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/pt/assin2/similarity/subset/original/model_preds.npy"
-    )
+def submission_average(source1=None, source2=None, target=None):
+    entailment_dict = {
+        0: 'None',
+        1: 'Entailment',
+        2: 'Paraphrase'
+    }
+    s1_source = ET.parse(source1)
+    s2_source = ET.parse(source2)
+    s1_root = s1_source.getroot()
+    s2_root = s2_source.getroot()
+    s1_similarity = []
+    s2_similarity = []
+    s1_entailment = []
+    s2_entailment = []
+    for pair in s1_root.iter('pair'):
+        s1_similarity.append(float(pair.get('similarity')))
+        s1_entailment.append(float(pair.get('entailment')))
+    for pair in s2_root.iter('pair'):
+        s2_similarity.append(float(pair.get('similarity')))
+        s2_entailment.append(float(pair.get('entailment')))
+    final_similarity = np.array(s1_similarity) + np.array(s2_similarity)
+    final_similarity = final_similarity / 2.0
+    final_entailment = np.array(s1_entailment) + np.array(s2_entailment)
+    final_entailment = final_entailment / 2.0
+    for idx, pair in enumerate(s1_root.iter('pair')):
+        entailment_score = final_entailment[idx]
+        similarity_score = final_similarity[idx]
+        pair.set('entailment', entailment_dict[round(entailment_score)])
+        pair.set('similarity', str(similarity_score))
+    s1_source.write(target)
 
-    convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-roberta-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/en/assin2/entailment/subset/original/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/en/assin2/similarity/subset/original/model_preds.npy"
-    )
+
+def generate_submissions(batch_convert_lst, submission_average_lst):
+    for item in batch_convert_lst:
+        convert(
+            source=item['source'],
+            target=item['target'],
+            entailment_array=item['entailment_array'],
+            similarity_array=item['similarity_array'],
+            df_source=item['df_source'],
+            convert_labels=item['convert_labels']
+        )
+    for item in submission_average_lst:
+        submission_average(
+            source1=item['source1'],
+            source2=item['source2'],
+            target=item['target']
+        )
+
+if __name__ == '__main__':
+    pass

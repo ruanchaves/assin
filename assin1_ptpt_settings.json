@@ -1,0 +1,345 @@
+{
+    "workers": 1,
+    "conv": [
+        {
+            "path": [
+                "./sources/assin-ptpt-train.xml",
+                "./sources/assin-ptpt-blind-test.xml"
+            ],
+            "translate": true,
+            "dictionary_file": "./sources/dictionary.json",
+            "measure": "similarity",
+            "split": 0.6,
+            "balance": [
+                "train",
+                "df"
+            ],
+            "metadata": {
+                "genre": "main_captions",
+                "filename": "MSRvid",
+                "year": "2019",
+                "source1": "none",
+                "source2": "none"
+            },
+            "save": [
+                {
+                    "target": "df",
+                    "directory": "./datasets/en/assin1ptpt/similarity/whole",
+                    "fname": "train.tsv"
+                },
+                {
+                    "target": "train",
+                    "directory": "./datasets/en/assin1ptpt/similarity/subset",
+                    "fname": "train.tsv"
+                },
+                {
+                    "target": "test",
+                    "directory": "./datasets/en/assin1ptpt/similarity/subset",
+                    "fname": "dev.tsv"
+                }
+            ],
+            "kfold": [
+                {
+                    "target": "train",
+                    "directory": "./datasets/en/assin1ptpt/similarity/subset",
+                    "fname": "train.tsv",
+                    "buckets": 5
+                }
+            ]
+        },
+        {
+            "path": [
+                "./sources/assin-ptpt-train.xml",
+                "./sources/assin-ptpt-blind-test.xml"
+            ],
+            "translate": true,
+            "dictionary_file": "./sources/dictionary.json",
+            "measure": "entailment",
+            "split": 0.6,
+            "balance": [
+                "train",
+                "df"
+            ],
+            "metadata": {
+                "genre": "main_captions",
+                "filename": "MSRvid",
+                "year": "2019",
+                "source1": "none",
+                "source2": "none"
+            },
+            "save": [
+                {
+                    "target": "df",
+                    "directory": "./datasets/en/assin1ptpt/entailment/whole",
+                    "fname": "train.tsv"
+                },
+                {
+                    "target": "train",
+                    "directory": "./datasets/en/assin1ptpt/entailment/subset",
+                    "fname": "train.tsv"
+                },
+                {
+                    "target": "test",
+                    "directory": "./datasets/en/assin1ptpt/entailment/subset",
+                    "fname": "dev.tsv"
+                }
+            ],
+            "kfold": [
+                {
+                    "target": "train",
+                    "directory": "./datasets/en/assin1ptpt/entailment/subset",
+                    "fname": "train.tsv",
+                    "buckets": 5
+                }
+            ]
+        },
+        {
+            "path": [
+                "./sources/assin-ptpt-train.xml",
+                "./sources/assin-ptpt-blind-test.xml"
+            ],
+            "translate": false,
+            "measure": "similarity",
+            "split": 0.6,
+            "balance": [
+                "train",
+                "df"
+            ],
+            "metadata": {
+                "genre": "main_captions",
+                "filename": "MSRvid",
+                "year": "2019",
+                "source1": "none",
+                "source2": "none"
+		    },
+		    "save": [
+			{
+			    "target": "df",
+			    "directory": "./datasets/pt/assin1ptpt/similarity/whole",
+			    "fname": "train.tsv"
+			},
+			{
+			    "target": "train",
+			    "directory": "./datasets/pt/assin1ptpt/similarity/subset",
+			    "fname": "train.tsv"
+			},
+			{
+			    "target": "test",
+			    "directory": "./datasets/pt/assin1ptpt/similarity/subset",
+			    "fname": "dev.tsv"
+			}
+		    ],
+		    "kfold": [
+			{
+			    "target": "train",
+			    "directory": "./datasets/pt/assin1ptpt/similarity/subset",
+			    "fname": "train.tsv",
+			    "buckets": 5
+			}
+		    ]
+		},
+		{
+		    "path": [
+			"./sources/assin-ptpt-train.xml",
+			"./sources/assin-ptpt-blind-test.xml"
+		    ],
+		    "translate": false,
+		    "measure": "entailment",
+		    "split": 0.6,
+		    "balance": [
+			"train",
+			"df"
+		    ],
+		    "metadata": {
+			"genre": "main_captions",
+			"filename": "MSRvid",
+			"year": "2019",
+			"source1": "none",
+			"source2": "none"
+		    },
+		    "save": [
+			{
+			    "target": "df",
+			    "directory": "./datasets/pt/assin1ptpt/entailment/whole",
+			    "fname": "train.tsv"
+			},
+			{
+			    "target": "train",
+			    "directory": "./datasets/pt/assin1ptpt/entailment/subset",
+			    "fname": "train.tsv"
+			},
+			{
+			    "target": "test",
+			    "directory": "./datasets/pt/assin1ptpt/entailment/subset",
+			    "fname": "dev.tsv"
+			}
+		    ],
+		    "kfold": [
+			{
+			    "target": "train",
+			    "directory": "./datasets/pt/assin1ptpt/entailment/subset",
+			    "fname": "train.tsv",
+			    "buckets": 5
+			}
+		    ]
+		}
+	    ],
+	    "train": [
+		{
+		    "model_type": " roberta",
+		    "model_name_or_path": " roberta-large",
+		    "do_train": " ",
+		    "do_eval": " ",
+		    "logging_steps": " 400",
+		    "save_steps": " 3000",
+		    "task_name": "=sts-b",
+		    "data_dir": "=./datasets/en/assin1ptpt/similarity/subset",
+		    "output_dir": "=./models/en/assin1ptpt/similarity/subset",
+		    "max_seq_length": "=128",
+		    "learning_rate": " 1e-5",
+		    "per_gpu_eval_batch_size": "=1",
+		    "per_gpu_train_batch_size": "=1",
+		    "gradient_accumulation_steps": "=16",
+		    "num_train_epochs": " 1.0",
+		    "model_name": "=roberta-large",
+		    "warmup_steps": "=120",
+		    "save_file": " ./results/en/assin1ptpt/similarity/subset/model",
+		    "kfold": true,
+		    "kfold_buckets": 5
+		},
+		{
+		    "model_type": " roberta",
+		    "model_name_or_path": " roberta-large",
+		    "do_train": " ",
+		    "do_eval": " ",
+		    "logging_steps": " 400",
+		    "save_steps": " 3000",
+		    "task_name": "=sts-b",
+		    "data_dir": "=./datasets/en/assin1ptpt/entailment/subset",
+		    "output_dir": "=./models/en/assin1ptpt/entailment/subset",
+		    "max_seq_length": "=128",
+		    "learning_rate": " 1e-5",
+		    "per_gpu_eval_batch_size": "=1",
+		    "per_gpu_train_batch_size": "=1",
+		    "gradient_accumulation_steps": "=16",
+		    "num_train_epochs": " 1.0",
+		    "model_name": "=roberta-large",
+		    "warmup_steps": "=120",
+		    "save_file": " ./results/en/assin1ptpt/entailment/subset/model",
+		    "kfold": true,
+		    "kfold_buckets": 5
+		},
+		{
+		    "model_type": " bert",
+		    "model_name_or_path": " bert-base-multilingual-cased",
+		    "do_train": " ",
+		    "do_eval": " ",
+		    "logging_steps": " 400",
+		    "save_steps": " 3000",
+		    "task_name": "=sts-b",
+		    "data_dir": "=./datasets/pt/assin1ptpt/similarity/subset",
+		    "output_dir": "=./models/pt/assin1ptpt/similarity/subset",
+		    "max_seq_length": "=128",
+		    "learning_rate": " 2e-5",
+		    "num_train_epochs": " 1.0",
+		    "per_gpu_eval_batch_size": "=1",
+		    "per_gpu_train_batch_size": "=1",
+		    "gradient_accumulation_steps": "=8",
+		    "save_file": " ./results/pt/assin1ptpt/similarity/subset/model",
+		    "kfold": true,
+		    "kfold_buckets": 5
+		},
+		{
+		    "model_type": " bert",
+		    "model_name_or_path": " bert-base-multilingual-cased",
+		    "do_train": " ",
+		    "do_eval": " ",
+		    "logging_steps": " 400",
+		    "save_steps": " 3000",
+		    "task_name": "=sts-b",
+		    "data_dir": "=./datasets/pt/assin1ptpt/entailment/subset",
+		    "output_dir": "=./models/pt/assin1ptpt/entailment/subset",
+		    "max_seq_length": "=128",
+		    "learning_rate": " 2e-5",
+		    "num_train_epochs": " 1.0",
+		    "per_gpu_eval_batch_size": "=1",
+		    "per_gpu_train_batch_size": "=1",
+		    "gradient_accumulation_steps": "=8",
+		    "save_file": " ./results/pt/assin1ptpt/entailment/subset/model",
+		    "kfold": true,
+		    "kfold_buckets": 5
+		}
+	    ],
+	    "ensemble": [
+		{
+		    "dir_bert": "./results/pt/assin1ptpt/similarity/subset",
+		    "dir_roberta": "./results/en/assin1ptpt/similarity/subset",
+		    "save_path": "./results/ensemble/assin1ptpt/similarity/subset"
+		},
+		{
+		    "dir_bert": "./results/pt/assin1ptpt/entailment/subset",
+		    "dir_roberta": "./results/en/assin1ptpt/entailment/subset",
+		    "save_path": "./results/ensemble/assin1ptpt/entailment/subset"
+		}
+	    ],
+	    "submission": [
+			{
+				"source": "./sources/assin-ptpt-blind-test.xml",
+				"target": "./submission/assin1ptpt",
+				"target_filename": "submission.xml",
+				"entailment_preds": "./results/ensemble/assin1ptpt/entailment/subset/model_preds.npy",
+				"similarity_preds": "./results/ensemble/assin1ptpt/similarity/subset/model_preds.npy",
+				"entailment_data": "./datasets/pt/assin1ptpt/entailment/subset/dev.tsv",
+				"similarity_data": "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv"
+			}
+		],
+		"batch_convert": [
+			{
+				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"target" : "./submission/assin1ptpt/final_submission_5folds.xml",
+				"entailment_array" : "./results/ensemble/assin1ptpt/entailment/subset/model_preds.npy",
+				"similarity_array" : "./results/ensemble/assin1ptpt/similarity/subset/model_preds.npy",
+				"df_source" : "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv",
+				"convert_labels" : true
+			},
+			{
+				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"target" : "./submission/assin1ptpt/submission-bert.xml",
+				"entailment_array" : "./results/pt/assin1ptpt/entailment/subset/original/model_preds.npy",
+				"similarity_array" : "./results/pt/assin1ptpt/similarity/subset/original/model_preds.npy",
+				"df_source" : "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv",
+				"convert_labels" : true
+			},
+			{
+				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"target" : "./submission/assin1ptpt/submission-roberta.xml",
+				"entailment_array" : "./results/en/assin1ptpt/entailment/subset/original/model_preds.npy",
+				"similarity_array" : "./results/en/assin1ptpt/similarity/subset/original/model_preds.npy",
+				"df_source" : "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv",
+				"convert_labels" : true
+			},
+			{
+				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"target" : "./submission/assin1ptpt/raw-submission-bert.xml",
+				"entailment_array" : "./results/pt/assin1ptpt/entailment/subset/original/model_preds.npy",
+				"similarity_array" : "./results/pt/assin1ptpt/similarity/subset/original/model_preds.npy",
+				"df_source" : "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv",
+				"convert_labels" : false
+			},
+			{
+				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"target" : "./submission/assin1ptpt/raw-submission-roberta.xml",
+				"entailment_array" : "./results/en/assin1ptpt/entailment/subset/original/model_preds.npy",
+				"similarity_array" : "./results/en/assin1ptpt/similarity/subset/original/model_preds.npy",
+				"df_source" : "./datasets/pt/assin1ptpt/similarity/subset/dev.tsv",
+				"convert_labels" : false
+			}
+		],
+		"submission_average": [
+			{
+				"source1": "./submission/assin1ptpt/raw-submission-bert.xml",
+				"source2": "./submission/assin1ptpt/raw-submission-roberta.xml",
+				"target": "./submission/assin1ptpt/submission-average.xml"
+			}
+		]
+}
