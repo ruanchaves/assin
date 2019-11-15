@@ -5,7 +5,9 @@ import os
 import xml.etree.ElementTree as ET
 import json 
 
+# https://cloud.google.com/translate/docs/basic/setup-basic
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './key.json'
+
 dct = 'dictionary.json'
 
 files = [
