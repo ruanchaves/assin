@@ -3,7 +3,7 @@
     "conv": [
         {
             "path": [
-                "./sources/assin2-train-only.xml",
+                "./sources/assin2-train.xml",
                 "./sources/assin-ptpt-blind-test.xml"
             ],
             "translate": true,
@@ -49,7 +49,7 @@
         },
         {
             "path": [
-                "./sources/assin2-train-only.xml",
+                "./sources/assin2-train.xml",
                 "./sources/assin-ptpt-blind-test.xml"
             ],
             "translate": true,
@@ -95,7 +95,7 @@
         },
         {
             "path": [
-                "./sources/assin2-train-only.xml",
+                "./sources/assin2-train.xml",
                 "./sources/assin-ptpt-blind-test.xml"
             ],
             "translate": false,
@@ -140,7 +140,7 @@
 		},
 		{
 		    "path": [
-			"./sources/assin2-train-only.xml",
+			"./sources/assin2-train.xml",
 			"./sources/assin-ptpt-blind-test.xml"
 		    ],
 		    "translate": false,
@@ -295,7 +295,7 @@
 		],
 		"batch_convert": [
 			{
-				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"source" : "./sources/assin-ptpt-blind-test.xml",
 				"target" : "./submission/assin1ptpt/final_submission_5folds.xml",
 				"entailment_array" : "./results/ensemble/assin1ptpt/entailment/subset/model_preds.npy",
 				"similarity_array" : "./results/ensemble/assin1ptpt/similarity/subset/model_preds.npy",
@@ -303,7 +303,7 @@
 				"convert_labels" : true
 			},
 			{
-				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"source" : "./sources/assin-ptpt-blind-test.xml",
 				"target" : "./submission/assin1ptpt/submission-bert.xml",
 				"entailment_array" : "./results/pt/assin1ptpt/entailment/subset/original/model_preds.npy",
 				"similarity_array" : "./results/pt/assin1ptpt/similarity/subset/original/model_preds.npy",
@@ -311,7 +311,7 @@
 				"convert_labels" : true
 			},
 			{
-				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"source" : "./sources/assin-ptpt-blind-test.xml",
 				"target" : "./submission/assin1ptpt/submission-roberta.xml",
 				"entailment_array" : "./results/en/assin1ptpt/entailment/subset/original/model_preds.npy",
 				"similarity_array" : "./results/en/assin1ptpt/similarity/subset/original/model_preds.npy",
@@ -319,7 +319,7 @@
 				"convert_labels" : true
 			},
 			{
-				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"source" : "./sources/assin-ptpt-blind-test.xml",
 				"target" : "./submission/assin1ptpt/raw-submission-bert.xml",
 				"entailment_array" : "./results/pt/assin1ptpt/entailment/subset/original/model_preds.npy",
 				"similarity_array" : "./results/pt/assin1ptpt/similarity/subset/original/model_preds.npy",
@@ -327,7 +327,7 @@
 				"convert_labels" : false
 			},
 			{
-				"source" : "./sources/assin-ptbr-blind-test.xml",
+				"source" : "./sources/assin-ptpt-blind-test.xml",
 				"target" : "./submission/assin1ptpt/raw-submission-roberta.xml",
 				"entailment_array" : "./results/en/assin1ptpt/entailment/subset/original/model_preds.npy",
 				"similarity_array" : "./results/en/assin1ptpt/similarity/subset/original/model_preds.npy",
