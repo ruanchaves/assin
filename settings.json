@@ -295,7 +295,7 @@
     ],
     "batch_convert": [
         {
-            "source": "./sources/assin-ptbr-blind-test.xml",
+            "source": "./sources/assin2-blind-test.xml",
             "target": "./submission/assin2/final_submission_5folds.xml",
             "entailment_array": "./results/ensemble/assin2/entailment/subset/model_preds.npy",
             "similarity_array": "./results/ensemble/assin2/similarity/subset/model_preds.npy",
@@ -303,7 +303,7 @@
             "convert_labels": true
         },
         {
-            "source": "./sources/assin-ptbr-blind-test.xml",
+            "source": "./sources/assin2-blind-test.xml",
             "target": "./submission/assin2/submission-bert.xml",
             "entailment_array": "./results/pt/assin2/entailment/subset/original/model_preds.npy",
             "similarity_array": "./results/pt/assin2/similarity/subset/original/model_preds.npy",
@@ -311,7 +311,7 @@
             "convert_labels": true
         },
         {
-            "source": "./sources/assin-ptbr-blind-test.xml",
+            "source": "./sources/assin2-blind-test.xml",
             "target": "./submission/assin2/submission-roberta.xml",
             "entailment_array": "./results/en/assin2/entailment/subset/original/model_preds.npy",
             "similarity_array": "./results/en/assin2/similarity/subset/original/model_preds.npy",
@@ -319,7 +319,7 @@
             "convert_labels": true
         },
         {
-            "source": "./sources/assin-ptbr-blind-test.xml",
+            "source": "./sources/assin2-blind-test.xml",
             "target": "./submission/assin2/raw-submission-bert.xml",
             "entailment_array": "./results/pt/assin2/entailment/subset/original/model_preds.npy",
             "similarity_array": "./results/pt/assin2/similarity/subset/original/model_preds.npy",
@@ -327,7 +327,7 @@
             "convert_labels": false
         },
         {
-            "source": "./sources/assin-ptbr-blind-test.xml",
+            "source": "./sources/assin2-blind-test.xml",
             "target": "./submission/assin2/raw-submission-roberta.xml",
             "entailment_array": "./results/en/assin2/entailment/subset/original/model_preds.npy",
             "similarity_array": "./results/en/assin2/similarity/subset/original/model_preds.npy",
