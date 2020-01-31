@@ -1,17 +1,7 @@
+# version 1.0.0
+
 # each worker requires about 8GB of GPU memory
 workers: 1
-
-# the dataset can be either 'assin2', 'assin1-ptbr' or 'assin1-ptpt'
-dataset: assin2
-
-# if evaluate_ensemble is false, all models will be only individually evaluated.
-evaluate_ensemble: true
-
-# if evaluate_english_model is false, English models will be ignored.
-evaluate_english_model: true
-
-# if evaluate_portuguese_model is false, Portuguese models will be ignored.
-evaluate_portuguese_model: true
 
 # Ensemble parameters
 # More folds tend to increase accuracy, but the fine-tuning process will take longer.
@@ -52,3 +42,16 @@ portuguese_model: {
   "per_gpu_train_batch_size": "=1",
   "gradient_accumulation_steps": "=8"
 }
+
+# Experimental parameters
+# The parameters below are reserved for future versions of this repository.
+# Changing them now will likely cause errors.
+
+# if evaluate_ensemble is false, all models will be only individually evaluated.
+evaluate_ensemble: true
+
+# if evaluate_english_model is false, English models will be ignored.
+evaluate_english_model: true
+
+# if evaluate_portuguese_model is false, Portuguese models will be ignored.
+evaluate_portuguese_model: true

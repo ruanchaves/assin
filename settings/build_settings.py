@@ -1,6 +1,7 @@
 import yaml
 import json
 import copy
+import os
 
 def try_set(fallback, params, key):
     try:
@@ -109,6 +110,11 @@ with open("config.yml", 'r') as stream:
     except yaml.YAMLError as exc:
         print(exc)
 
+try:
+    params['dataset']
+except:
+    params['dataset'] = os.environ['DATASET']
+
 settings = {}
 
 settings['workers'] = 1
@@ -140,26 +146,26 @@ if params['evaluate_portuguese_model']:
 
 settings['ensemble'] = [
         {
-            "dir_bert": "./results/pt/assin2/similarity/subset",
-            "dir_roberta": "./results/en/assin2/similarity/subset",
-            "save_path": "./results/ensemble/assin2/similarity/subset"
+            "dir_bert": "./results/pt/{0}/similarity/subset".format(params['dataset']),
+            "dir_roberta": "./results/en/{0}/similarity/subset".format(params['dataset']),
+            "save_path": "./results/ensemble/{0}/similarity/subset".format(params['dataset'])
         },
         {
-            "dir_bert": "./results/pt/assin2/entailment/subset",
-            "dir_roberta": "./results/en/assin2/entailment/subset",
-            "save_path": "./results/ensemble/assin2/entailment/subset"
+            "dir_bert": "./results/pt/{0}/entailment/subset".format(params['dataset']),
+            "dir_roberta": "./results/en/{0}/entailment/subset".format(params['dataset']),
+            "save_path": "./results/ensemble/{0}/entailment/subset".format(params['dataset'])
         }
     ]
 
 settings['submission'] = [
         {
-            "source": "./sources/assin2-blind-test.xml",
-            "target": "./submission/assin2",
+            "source": "./sources/{0}-blind-test.xml".format(params['dataset']),
+            "target": "./submission",
             "target_filename": "submission.xml",
-            "entailment_preds": "./results/ensemble/assin2/entailment/subset/model_preds.npy",
-            "similarity_preds": "./results/ensemble/assin2/similarity/subset/model_preds.npy",
-            "entailment_data": "./datasets/pt/assin2/entailment/subset/dev.tsv",
-            "similarity_data": "./datasets/pt/assin2/similarity/subset/dev.tsv"
+            "entailment_preds": "./results/ensemble/{0}/entailment/subset/model_preds.npy".format(params['dataset']),
+            "similarity_preds": "./results/ensemble/{0}/similarity/subset/model_preds.npy".format(params['dataset']),
+            "entailment_data": "./datasets/pt/{0}/entailment/subset/dev.tsv".format(params['dataset']),
+            "similarity_data": "./datasets/pt/{0}/similarity/subset/dev.tsv".format(params['dataset'])
         }
     ]
 
