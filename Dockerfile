@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.15.2-gpu
+FROM nvcr.io/nvidia/tensorflow:20.01-tf1-py3
 
 RUN apt-get update
 RUN apt-get -y install python3-venv python3-dev
