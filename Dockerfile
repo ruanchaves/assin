@@ -12,9 +12,3 @@ RUN pip install wheel
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-
-RUN pip uninstall -y tensorflow
-RUN pip install tensorflow==1.15
-
-RUN pip uninstall -y pytorch-transformers
-RUN pip install transformers==2.3.0
