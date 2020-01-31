@@ -1,10 +1,10 @@
-FROM tensorflow/tensorflow:1.15.2
+FROM nvcr.io/nvidia/tensorflow:18.08-py3
 
 RUN apt-get update
 RUN apt-get -y install python3-venv python3-dev
 
 ENV VIRTUAL_ENV=/opt/venv
-RUN python3.6 -m venv $VIRTUAL_ENV
+RUN python3.5 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN pip install --upgrade pip
