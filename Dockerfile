@@ -1,6 +1,10 @@
 FROM nvcr.io/nvidia/tensorflow:18.08-py3
 
 RUN apt-get update
+RUN apt-get install software-properties-common
+RUN apt-get update
+
+RUN add-apt-repository ppa:deadsnakes/ppa
 
 RUN apt-get install -y build-essential python3.6 python3.6-dev python3-pip python3.6-venv
 
