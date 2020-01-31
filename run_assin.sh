@@ -1,3 +1,9 @@
+python3.6 -m venv ../assin2_env
+source ../assin2_env/bin/activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
 DATE=$(date +%Y%m%d_%H%M%S)
 
 if [ $DATASET == 'assin2' ]
@@ -15,9 +21,8 @@ else
     exit 1
 fi
 
-cd /home
 cd settings
-/opt/venv/bin/python build_settings.py
+python build_settings.py
 cd ..
 
 mkdir ../$DATE
@@ -25,8 +30,8 @@ cp -r * ../$DATE
 mv ../$DATE .
 cd $DATE
 
-/opt/venv/bin/python assin.py settings/settings.json
-/opt/venv/bin/python final_submission.py
+python assin.py settings/settings.json
+python final_submission.py
 
 mkdir -p ./submission
 
