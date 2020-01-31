@@ -1,10 +1,14 @@
 FROM nvcr.io/nvidia/tensorflow:18.08-py3
 
 RUN apt-get update
-RUN apt-get -y install python3-venv python3-dev
+
+RUN apt-get install -y build-essential python3.6 python3.6-dev python3-pip python3.6-venv
+
+RUN python3.6 -m pip install pip --upgrade
+RUN python3.6 -m pip install wheel
 
 ENV VIRTUAL_ENV=/opt/venv
-RUN python3.5 -m venv $VIRTUAL_ENV
+RUN python3.6 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN pip install --upgrade pip
