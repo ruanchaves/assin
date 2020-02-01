@@ -1,7 +1,7 @@
 # version 1.0.0
 
-# each worker requires about 8GB of GPU memory
-workers: 3
+# each worker requires about 3GB of GPU memory
+workers: 10
 
 # Ensemble parameters
 # More folds tend to increase accuracy, but the fine-tuning process will take longer.

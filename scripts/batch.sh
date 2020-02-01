@@ -5,8 +5,8 @@ config_files=(settings/$PREFIX*.yml)
 for dataset in ${datasets[@]}; do
     for filename in ${config_files[@]}; do
         single_filename="${filename##*/}"
-
-        sudo nvidia-docker run \
+        CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
+        sudo -E nvidia-docker run \
             -v `pwd`:/home \
             --env DATASET=$dataset \
             --env CONFIG=$single_filename \
