@@ -3,19 +3,15 @@ DATE=$(date +%Y%m%d_%H%M%S)
 if [[ $DATASET == 'assin2' ]]
 then
     TEST_FILE='./sources/assin2-test.xml'
- 
 elif [[ $DATASET == 'assin-ptbr' ]]
 then
     TEST_FILE='./sources/assin-ptbr-test.xml'
- 
 elif [[ $DATASET == 'assin-ptpt' ]]
 then
     TEST_FILE='./sources/assin-ptpt-test.xml'
-
 elif [[ $DATASET == 'toy' ]]
 then
     TEST_FILE='./sources/toy-test.xml'
-
 else
     exit 1
 fi
