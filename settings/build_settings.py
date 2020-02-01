@@ -31,11 +31,11 @@ path_list_dict = {
             "assin2-train.xml",
             "assin2-blind-test.xml"
         ],
-    "assin1-ptbr": [
+    "assin-ptbr": [
             "assin-ptbr-train.xml",
             "assin-ptbr-blind-test.xml"
         ],
-    "assin1-ptpt": [
+    "assin-ptpt": [
             "assin-ptpt-train.xml",
             "assin-ptpt-blind-test.xml"        
     ]
