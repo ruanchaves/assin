@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<entailment-corpus>
+    <pair entailment="Entailment" id="1" similarity="4.0">
+        <t>Mau tempo abate-se sobre o Algarve e inunda a baixa de Albufeira.</t>
+        <h>A baixa de Albufeira foi afetada pelo mau tempo.</h>
+    </pair>
+</entailment-corpus>
