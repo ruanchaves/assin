@@ -1,4 +1,6 @@
-DATE=$(date +%Y%m%d_%H%M%S)
+label="tmp_training_"
+timestamp=$(date +%Y%m%d_%H%M%S)
+DATE=$label$timestamp
 
 if [[ $DATASET == 'assin2' ]]
 then
@@ -22,8 +24,7 @@ python build_settings.py
 cd ..
 
 mkdir ../$DATE
-shopt -s extglob
-cp -r *!(20*) ../$DATE
+rsync -avr --exclude="tmp_training_*" --exclude="submission_*" . ../$DATE
 mv ../$DATE .
 cd $DATE
 
@@ -46,8 +47,8 @@ python assin-eval.py  assin2-test.xml ./submission/submission-english.xml >> ./s
 mv settings/settings.json ./submission/
 mv settings/config.yml ./submission/
 
-mkdir submission_$DATE
-mv ./submission/* submission_$DATE
-mv submission_$DATE ..
+mkdir submission_$timestamp
+mv ./submission/* submission_$timestamp
+mv submission_$timestamp ..
 cd ..
 rm -rf $DATE

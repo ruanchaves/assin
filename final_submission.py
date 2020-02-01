@@ -28,7 +28,7 @@ def convert(source=None,
             target=None, 
             entailment_array=None, 
             similarity_array=None,
-            df_source='./datasets/pt/assin2/similarity/subset/dev.tsv'):
+            df_source='./datasets/pt/{0}/similarity/subset/dev.tsv'.format(dataset)):
     
     entailment_dict = {
         0: 'None',
