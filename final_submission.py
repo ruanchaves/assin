@@ -83,13 +83,13 @@ def average(left, right, target):
     root = xml_source.getroot()
     for idx,pair in enumerate(root.iter('pair')):
         entailment[idx].append(float(reverse_entailment_dict[pair.get('entailment')]))
-        similarity[idx].append([float(pair.get('similarity'))])
+        similarity[idx].append(float(pair.get('similarity')))
 
-    for idx,item in entailment:
+    for idx,item in enumerate(entailment):
         value = int(np.mean(item))
         entailment[idx] = entailment_dict[value]
 
-    for idx,item in similarity:
+    for idx,item in enumerate(similarity):
         similarity[idx] = str(np.mean(item))
 
     xml_source = ET.parse(left)
