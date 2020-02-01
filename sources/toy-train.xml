@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<entailment-corpus>
+    <pair entailment="None" id="1" similarity="3.5">
+        <t>Relembre-se que o atleta estava afastado dos relvados desde maio, altura em que contraiu uma lesão na perna esquerda.</t>
+        <h>André Gomes entra em campo quatro meses depois de uma lesão na perna esquerda o ter afastado dos relvados.</h>
+    </pair>
+    </entailment-corpus>
