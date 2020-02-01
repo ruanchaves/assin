@@ -32,7 +32,8 @@ def convert(source=None,
     
     entailment_dict = {
         0: 'None',
-        1: 'Entailment'
+        1: 'Entailment',
+        2: 'Paraphrase'
     }
 
     entailment_data = list(np.load(entailment_array))
@@ -63,11 +64,13 @@ def convert(source=None,
 def average(left, right, target):
     entailment_dict = {
         0: 'None',
-        1: 'Entailment'
+        1: 'Entailment',
+        2: 'Paraphrase'
     }
     reverse_entailment_dict = {
         'None': 0,
-        'Entailment': 1
+        'Entailment': 1,
+        'Paraphrase': 2
     }
 
     xml_source = ET.parse(left)

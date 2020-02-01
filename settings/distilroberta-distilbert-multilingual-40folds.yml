@@ -5,7 +5,7 @@ workers: 3
 
 # Ensemble parameters
 # More folds tend to increase accuracy, but the fine-tuning process will take longer.
-ensemble_folds: 2
+ensemble_folds: 40
 
 # Transformer parameters
 # The parameters are automatically passed to run_glue.py .
@@ -24,7 +24,7 @@ english_model: {
   "per_gpu_eval_batch_size": "=1",
   "per_gpu_train_batch_size": "=1",
   "gradient_accumulation_steps": "=16",
-  "num_train_epochs": " 1.0",
+  "num_train_epochs": " 11.0",
   "warmup_steps": "=120"
 }
 
@@ -37,7 +37,7 @@ portuguese_model: {
   "save_steps": " 3000",
   "max_seq_length": "=128",
   "learning_rate": " 2e-5",
-  "num_train_epochs": " 1.0",
+  "num_train_epochs": " 4.0",
   "per_gpu_eval_batch_size": "=1",
   "per_gpu_train_batch_size": "=1",
   "gradient_accumulation_steps": "=8"

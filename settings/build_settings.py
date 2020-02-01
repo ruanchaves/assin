@@ -108,7 +108,12 @@ def train_template(lang, dataset, task, dictionary):
     return model
 
 params = ''
-with open("config.yml", 'r') as stream:
+try:
+    config_file = os.environ['CONFIG']
+except:
+    config_file = 'config.yml'
+
+with open(config_file, 'r') as stream:
     try:
         params = yaml.safe_load(stream)
     except yaml.YAMLError as exc:
