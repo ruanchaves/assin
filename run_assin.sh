@@ -44,11 +44,11 @@ python assin-eval.py  assin2-test.xml ./submission/submission-portuguese.xml >> 
 echo 'ENGLISH MODEL \n' >> ./submission/result.txt
 python assin-eval.py  assin2-test.xml ./submission/submission-english.xml >> ./submission/result.txt
 
-mv settings/settings.json ./submission/
-mv settings/config.yml ./submission/
+# mv settings/settings.json ./submission/
+# mv settings/config.yml ./submission/
 
-mkdir submission_$timestamp
-mv ./submission/* submission_$timestamp
-mv submission_$timestamp ..
-cd ..
-rm -rf $DATE
+# mkdir submission_$timestamp
+# mv ./submission/* submission_$timestamp
+# mv submission_$timestamp ..
+# cd ..
+# rm -rf $DATE
