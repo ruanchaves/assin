@@ -45,7 +45,7 @@ python assin-eval.py  assin2-test.xml ./submission/submission-portuguese.xml >> 
 echo 'ENGLISH MODEL: ' >> ./submission/result.txt
 python assin-eval.py  assin2-test.xml ./submission/submission-english.xml >> ./submission/result.txt
 
-echo 'END TIME: '
+echo 'END TIME: ' >> ./submission/result.txt
 now_timestamp=$(date +%Y%m%d_%H%M%S)
 echo $now_timestamp >> ./submission/result.txt
 
