@@ -15,12 +15,12 @@ def get_path_list(task_name):
             "assin2-train.xml",
             "assin2-blind-test.xml"
         ]
-    elif task_name == 'assin1-ptbr':
+    elif task_name == 'assin-ptbr':
         return [
             "assin-ptbr-train.xml",
             "assin-ptbr-blind-test.xml"
         ]
-    elif task_name == 'assin1-ptpt':
+    elif task_name == 'assin-ptpt':
         return [
             "assin-ptpt-train.xml",
             "assin-ptpt-blind-test.xml"
