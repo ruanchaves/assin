@@ -5,7 +5,7 @@ workers: 1
 
 # Ensemble parameters
 # More folds tend to increase accuracy, but the fine-tuning process will take longer.
-ensemble_folds: 5
+ensemble_folds: 2
 
 # Transformer parameters
 # The parameters are automatically passed to run_glue.py .

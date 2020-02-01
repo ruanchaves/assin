@@ -1,14 +1,14 @@
 DATE=$(date +%Y%m%d_%H%M%S)
 
-if [ $DATASET == 'assin2' ]
+if [[ $DATASET == 'assin2' ]]
 then
     TEST_FILE='./sources/assin2-test.xml'
  
-elif [ $DATASET == 'assin-ptbr' ]
+elif [[ $DATASET == 'assin-ptbr' ]]
 then
     TEST_FILE='./sources/assin-ptbr-test.xml'
  
-elif [ $DATASET == 'assin-ptpt' ]
+elif [[ $DATASET == 'assin-ptpt' ]]
 then
     TEST_FILE='./sources/assin-ptpt-test.xml'
 else
@@ -17,7 +17,7 @@ fi
 
 cd /home
 cd settings
-/opt/venv/bin/python build_settings.py
+python build_settings.py
 cd ..
 
 mkdir ../$DATE
@@ -25,8 +25,8 @@ cp -r * ../$DATE
 mv ../$DATE .
 cd $DATE
 
-/opt/venv/bin/python assin.py settings/settings.json
-/opt/venv/bin/python final_submission.py
+python assin.py settings/settings.json
+python final_submission.py
 
 mkdir -p ./submission
 

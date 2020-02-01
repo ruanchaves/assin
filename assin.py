@@ -5,8 +5,6 @@ from utils_submission import assin_json_writer
 from report import generate_report
 import sys 
 import json
-from getpass import getpass
-import datetime
 
 if __name__ == '__main__':
 
