@@ -7,4 +7,496 @@
     <t>O cara est&#225; fazendo exerc&#237;cios no ch&#227;o</t>
     <h>Um cara est&#225; fazendo exerc&#237;cios</h>
   </pair>
+  <pair entailment="Unknown" id="2" similarity="-1.0">
+    <t>Um cachorro grande e um cachorro pequenino est&#227;o parados ao lado do balc&#227;o da cozinha e est&#227;o investigando</t>
+    <h>Um cachorro grande e um cachorro pequenino est&#227;o de p&#233; no balc&#227;o da cozinha e investigam</h>
+  </pair>
+  <pair entailment="Unknown" id="3" similarity="-1.0">
+    <t>Um menino jovem vestindo um traje de banho vermelho est&#225; pulando em uma piscina de crian&#231;as azul</t>
+    <h>Um menino jovem est&#225; vestindo um mai&#244; vermelho e pulando para fora de uma piscina de crian&#231;a</h>
+  </pair>
+  <pair entailment="Unknown" id="4" similarity="-1.0">
+    <t>Um cara velho com uma barba que &#233; cinza est&#225; andando de bicicleta</t>
+    <h>Um cara velho com uma barba grisalha est&#225; andando de bicicleta</h>
+  </pair>
+  <pair entailment="Unknown" id="5" similarity="-1.0">
+    <t>Uma garrafa est&#225; sendo lambida pelo gato</t>
+    <h>O gato est&#225; lambendo um objeto</h>
+  </pair>
+  <pair entailment="Unknown" id="6" similarity="-1.0">
+    <t>As pessoas n&#227;o est&#227;o andando na estrada ao lado de uma bela cachoeira</t>
+    <h>Uma cachoeira est&#225; fluindo em uma piscina rasa</h>
+  </pair>
+  <pair entailment="Unknown" id="7" similarity="-1.0">
+    <t>Um cara em uma bicicleta est&#225; andando em uma roda s&#243;</t>
+    <h>Um cara est&#225; andando de bicicleta com uma roda s&#243;</h>
+  </pair>
+  <pair entailment="Unknown" id="8" similarity="-1.0">
+    <t>Uma mulher est&#225; andando a cavalo</t>
+    <h>N&#227;o tem nenhuma mulher andando a cavalo</h>
+  </pair>
+  <pair entailment="Unknown" id="9" similarity="-1.0">
+    <t>Uma pessoa n&#227;o est&#225; descascando uma banana</t>
+    <h>Um homem est&#225; lendo um e-mail</h>
+  </pair>
+  <pair entailment="Unknown" id="10" similarity="-1.0">
+    <t>Uma crian&#231;a jovem negra est&#225; esperando na beira de um corpo d'&#225;gua perto de alguns baldes</t>
+    <h>Uma jovem crian&#231;a negra est&#225; parada na beira de uma po&#231;a de &#225;gua perto de alguns baldes</h>
+  </pair>
+  <pair entailment="Unknown" id="11" similarity="-1.0">
+    <t>O monte de homens est&#225; brincando com lama em um campo de r&#250;gbi</t>
+    <h>Alguns homens est&#227;o jogando r&#250;gbi</h>
+  </pair>
+  <pair entailment="Unknown" id="12" similarity="-1.0">
+    <t>Quatro pessoas est&#227;o andando atrav&#233;s da neve espessa e o sol est&#225; se pondo</t>
+    <h>Ningu&#233;m est&#225; atravessando a neve da linda paisagem nevada</h>
+  </pair>
+  <pair entailment="Unknown" id="13" similarity="-1.0">
+    <t>Um beb&#234; est&#225; animando outro beb&#234;</t>
+    <h>Um beb&#234; est&#225; espirrando e assustando outro beb&#234;</h>
+  </pair>
+  <pair entailment="Unknown" id="14" similarity="-1.0">
+    <t>Uma mulher est&#225; descascando uma batata</t>
+    <h>Uma mulher n&#227;o est&#225; descascando uma batata</h>
+  </pair>
+  <pair entailment="Unknown" id="15" similarity="-1.0">
+    <t>Um cachorro est&#225; nadando atr&#225;s da bola</t>
+    <h>Um cachorro est&#225; latindo para uma bola</h>
+  </pair>
+  <pair entailment="Unknown" id="16" similarity="-1.0">
+    <t>Um garoto est&#225; fazendo um discurso</t>
+    <h>Um garoto est&#225; falando</h>
+  </pair>
+  <pair entailment="Unknown" id="17" similarity="-1.0">
+    <t>Uma estudante de uniforme com uma sacola preta est&#225; em um trem lotado</t>
+    <h>Uma menina com uma sacola preta est&#225; em um trem lotado</h>
+  </pair>
+  <pair entailment="Unknown" id="18" similarity="-1.0">
+    <t>Um cachorro branco de coleira est&#225; andando na &#225;gua</t>
+    <h>Um homem sem camisa est&#225; jogando futebol em um gramado</h>
+  </pair>
+  <pair entailment="Unknown" id="19" similarity="-1.0">
+    <t>Dois meninos g&#234;meos pr&#233;-adolescentes est&#227;o duelando com varas</t>
+    <h>Dois meninos g&#234;meos pr&#233;-adolescentes est&#227;o brincando com cartas</h>
+  </pair>
+  <pair entailment="Unknown" id="20" similarity="-1.0">
+    <t>O monte de homens est&#225; jogando r&#250;gbi em um campo cheio de lama</t>
+    <h>Alguns homens est&#227;o jogando r&#250;gbi</h>
+  </pair>
+  <pair entailment="Unknown" id="21" similarity="-1.0">
+    <t>Um cara est&#225; polvilhando queijo ralado em uma pizza</t>
+    <h>Um cara est&#225; polvilhando queijo em uma pizza</h>
+  </pair>
+  <pair entailment="Unknown" id="22" similarity="-1.0">
+    <t>Um cachorro est&#225; correndo para cima do morro gramado</t>
+    <h>N&#227;o tem nenhum cachorro correndo para cima do morro gramado</h>
+  </pair>
+  <pair entailment="Unknown" id="23" similarity="-1.0">
+    <t>Uma crian&#231;a est&#225; correndo para dentro e para fora das ondas do oceano</t>
+    <h>Uma crian&#231;a est&#225; correndo para dentro e para fora das ondas oce&#226;nicas</h>
+  </pair>
+  <pair entailment="Unknown" id="24" similarity="-1.0">
+    <t>As pessoas est&#227;o andando de bote e remando</t>
+    <h>Algumas pessoas est&#227;o navegando de bote</h>
+  </pair>
+  <pair entailment="Unknown" id="25" similarity="-1.0">
+    <t>A senhora est&#225; pegando o canguru</t>
+    <h>A mulher est&#225; pegando o canguru</h>
+  </pair>
+  <pair entailment="Unknown" id="26" similarity="-1.0">
+    <t>Duas crian&#231;as pequeninas est&#227;o brincando com um carro de brinquedo na rua</t>
+    <h>Uma menina est&#225; empurrando um kart e uma filha est&#225; assistindo seu pai</h>
+  </pair>
+  <pair entailment="Unknown" id="27" similarity="-1.0">
+    <t>Um grupo de pessoas est&#225; relaxadamente sentado perto de um monumento de pedra vermelha</t>
+    <h>Um grupo de pessoas est&#225; sentado pr&#243;ximo a uma estrutura de pedra vermelha</h>
+  </pair>
+  <pair entailment="Unknown" id="28" similarity="-1.0">
+    <t>Dois meninos est&#227;o deitados no oceano perto da praia</t>
+    <h>Dois meninos est&#227;o deitados na &#225;gua perto da praia</h>
+  </pair>
+  <pair entailment="Unknown" id="29" similarity="-1.0">
+    <t>Uma crian&#231;a, que &#233; pequena, est&#225; ao ar livre escalando degraus ao ar livre em uma &#225;rea cheia de grama</t>
+    <h>Uma crian&#231;a pequenina est&#225; ao ar livre escalando degraus em uma &#225;rea gramada</h>
+  </pair>
+  <pair entailment="Unknown" id="30" similarity="-1.0">
+    <t>N&#227;o tem nenhum coelho brincando com um coelho de brinquedo</t>
+    <h>Um coelho est&#225; brincando com um coelho de pel&#250;cia</h>
+  </pair>
+  <pair entailment="Unknown" id="31" similarity="-1.0">
+    <t>Um coelho est&#225; comendo um peda&#231;o de bambu</t>
+    <h>O coelho est&#225; comendo bambu</h>
+  </pair>
+  <pair entailment="Unknown" id="32" similarity="-1.0">
+    <t>Uma pessoa est&#225; saltando alto no ar em uma prancha</t>
+    <h>Algu&#233;m est&#225; pulando no ar em uma prancha</h>
+  </pair>
+  <pair entailment="Unknown" id="33" similarity="-1.0">
+    <t>Um grupo de cachorros est&#225; competindo e tem focinheiras nos seus narizes</t>
+    <h>Um grupo de cachorros criados para corrida est&#225; usando uniformes listrados e est&#225; correndo pelo caminho</h>
+  </pair>
+  <pair entailment="Unknown" id="34" similarity="-1.0">
+    <t>Um menino e uma menina est&#227;o pelados</t>
+    <h>O menino e a menina est&#227;o brincando e usando boias de bra&#231;o</h>
+  </pair>
+  <pair entailment="Unknown" id="35" similarity="-1.0">
+    <t>N&#227;o tem nenhum homem cantando e tocando viol&#227;o</t>
+    <h>O homem est&#225; cantando e tocando o viol&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="36" similarity="-1.0">
+    <t>Um homem e uma mulher est&#227;o dirigindo pela estrada abaixo em um ve&#237;culo sem teto</t>
+    <h>Dois homens est&#227;o dirigindo por uma estrada em um ve&#237;culo convers&#237;vel</h>
+  </pair>
+  <pair entailment="Unknown" id="37" similarity="-1.0">
+    <t>N&#227;o tem nenhum menino cortando grama com tesouras</t>
+    <h>Um menino est&#225; cortando a grama com tesouras</h>
+  </pair>
+  <pair entailment="Unknown" id="38" similarity="-1.0">
+    <t>Um homem est&#225; fatiando uma batata em peda&#231;os</t>
+    <h>N&#227;o tem nenhum homem fatiando uma batata em peda&#231;os</h>
+  </pair>
+  <pair entailment="Unknown" id="39" similarity="-1.0">
+    <t>O homem est&#225; rachando ovos em uma tigela</t>
+    <h>A senhora est&#225; quebrando um ovo em uma tigela</h>
+  </pair>
+  <pair entailment="Unknown" id="40" similarity="-1.0">
+    <t>O cara est&#225; cuidadosamente alimentando a cobra com um rato</t>
+    <h>Um cara est&#225; alimentando um rato para a cobra</h>
+  </pair>
+  <pair entailment="Unknown" id="41" similarity="-1.0">
+    <t>Um cachorro castanho est&#225; saltando sobre um obst&#225;culo vermelho</t>
+    <h>Um homem jovem est&#225; fugindo da linha de pesca</h>
+  </pair>
+  <pair entailment="Unknown" id="42" similarity="-1.0">
+    <t>Um homem n&#227;o est&#225; tocando bateria</t>
+    <h>Um homem est&#225; tocando o viol&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="43" similarity="-1.0">
+    <t>Uma mulher est&#225; andando a cavalo</t>
+    <h>Uma mulher n&#227;o est&#225; andando a cavalo</h>
+  </pair>
+  <pair entailment="Unknown" id="44" similarity="-1.0">
+    <t>O menino de azul est&#225; fugindo da mulher de azul</t>
+    <h>Um jovem menino est&#225; brincando no parque com sua m&#227;e</h>
+  </pair>
+  <pair entailment="Unknown" id="45" similarity="-1.0">
+    <t>Uma menina jovem est&#225; pulando corda em uma cal&#231;ada perto de um estacionamento</t>
+    <h>Uma menina est&#225; pulando corda em uma cal&#231;ada</h>
+  </pair>
+  <pair entailment="Unknown" id="46" similarity="-1.0">
+    <t>Um cachorro, que &#233; grande e cinza, est&#225; carregando uma bola em sua boca com dificuldade e correndo atrav&#233;s da grama</t>
+    <h>Um cachorro, que &#233; grande, est&#225; carregando uma bola na boca e correndo atrav&#233;s da grama</h>
+  </pair>
+  <pair entailment="Unknown" id="47" similarity="-1.0">
+    <t>Um palha&#231;o est&#225; cantando no palco e pessoas est&#227;o dan&#231;ando</t>
+    <h>Uma pessoa fantasiada de palha&#231;o est&#225; cantando</h>
+  </pair>
+  <pair entailment="Unknown" id="48" similarity="-1.0">
+    <t>Um grande cachorro branco est&#225; correndo atrav&#233;s do gramado</t>
+    <h>Um pequenino cachorro branco est&#225; correndo atrav&#233;s do gramado</h>
+  </pair>
+  <pair entailment="Unknown" id="49" similarity="-1.0">
+    <t>Um homem est&#225; fatiando um peixe</t>
+    <h>N&#227;o tem nenhum homem cortando um peixe</h>
+  </pair>
+  <pair entailment="Unknown" id="50" similarity="-1.0">
+    <t>Um refrigerante est&#225; sendo aberto e tomado por uma menina</t>
+    <h>Uma pessoa est&#225; abrindo um refrigerante e o bebendo</h>
+  </pair>
+  <pair entailment="Unknown" id="51" similarity="-1.0">
+    <t>Um cachorro castanho e um cachorro preto est&#227;o longe da grama</t>
+    <h>Um cachorro castanho e um cachorro preto est&#227;o na grama</h>
+  </pair>
+  <pair entailment="Unknown" id="52" similarity="-1.0">
+    <t>O cara est&#225; andando alegremente na floresta</t>
+    <h>O cara est&#225; escalando no bosque</h>
+  </pair>
+  <pair entailment="Unknown" id="53" similarity="-1.0">
+    <t>Uma mulher est&#225; andando a cavalo</t>
+    <h>Alguma coisa est&#225; sendo frita por uma mulher</h>
+  </pair>
+  <pair entailment="Unknown" id="54" similarity="-1.0">
+    <t>Um homem est&#225; cortando uma cebola</t>
+    <h>N&#227;o tem nenhuma mulher fatiando uma cebola</h>
+  </pair>
+  <pair entailment="Unknown" id="55" similarity="-1.0">
+    <t>Uma crian&#231;a est&#225; cantando e tocando um viol&#227;o alegremente</t>
+    <h>Uma crian&#231;a est&#225; tocando viol&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="56" similarity="-1.0">
+    <t>Dois rapazes est&#227;o carregando cestas coloridas e cobertores e andando perto de um pr&#233;dio</t>
+    <h>Duas pessoas est&#227;o carregando cestas coloridas e cobertores</h>
+  </pair>
+  <pair entailment="Unknown" id="57" similarity="-1.0">
+    <t>Uma pessoa est&#225; de p&#233; em um vasto campo de gelo glacial</t>
+    <h>Alguma pessoa est&#225; de p&#233; em um vasto campo de gelo</h>
+  </pair>
+  <pair entailment="Unknown" id="58" similarity="-1.0">
+    <t>O animal est&#225; perseguindo uma bola na grama</t>
+    <h>Um animal est&#225; correndo atr&#225;s de uma bola na grama</h>
+  </pair>
+  <pair entailment="Unknown" id="59" similarity="-1.0">
+    <t>Um homem est&#225; andando de moto</t>
+    <h>O homem est&#225; pilotando uma lambreta</h>
+  </pair>
+  <pair entailment="Unknown" id="60" similarity="-1.0">
+    <t>Um homem de idade est&#225; sentado em um banco</t>
+    <h>A mulher est&#225; sentada em um banco e est&#225; usando uma jaqueta cinza e cal&#231;a preta</h>
+  </pair>
+  <pair entailment="Unknown" id="61" similarity="-1.0">
+    <t>Um cara mais velho est&#225; montando um touro mec&#226;nico</t>
+    <h>O cara est&#225; montando um touro que &#233; mec&#226;nico</h>
+  </pair>
+  <pair entailment="Unknown" id="62" similarity="-1.0">
+    <t>Um cachorro que &#233; peludo e preto est&#225; em um quintal dos fundos e est&#225; carregando uma cesta em sua boca</t>
+    <h>Um cachorro perto de uma &#225;rvore, que provavelmente &#233; um pinheiro, est&#225; derrubando um balde</h>
+  </pair>
+  <pair entailment="Unknown" id="63" similarity="-1.0">
+    <t>Um homem com um chap&#233;u branco est&#225; saindo do palco</t>
+    <h>Quatro pessoas est&#227;o fazendo uma performance musical ao ar livre</h>
+  </pair>
+  <pair entailment="Unknown" id="64" similarity="-1.0">
+    <t>Uma pessoa est&#225; despejando &#243;leo para cozinhar em uma panela</t>
+    <h>Uma pessoa est&#225; despejando &#243;leo de cozinha em uma panela</h>
+  </pair>
+  <pair entailment="Unknown" id="65" similarity="-1.0">
+    <t>Um homem grande est&#225; sentado em uma loja de acess&#243;rios militar</t>
+    <h>Um homem grande est&#225; sentado em uma loja de acess&#243;rios militares</h>
+  </pair>
+  <pair entailment="Unknown" id="66" similarity="-1.0">
+    <t>Peda&#231;os de manteiga est&#227;o sendo adicionados &#224; batedeira</t>
+    <h>N&#227;o tem nenhum homem cortando peda&#231;os de manteiga em uma tigela de misturar</h>
+  </pair>
+  <pair entailment="Unknown" id="67" similarity="-1.0">
+    <t>Um urso panda est&#225; comendo um pouco de bambu</t>
+    <h>Um pouco de bambu est&#225; sendo comido por um urso panda</h>
+  </pair>
+  <pair entailment="Unknown" id="68" similarity="-1.0">
+    <t>Um beb&#234; elefante n&#227;o est&#225; comendo uma &#225;rvore pequenina</t>
+    <h>Uma menina pequena est&#225; negociando uma lambreta</h>
+  </pair>
+  <pair entailment="Unknown" id="69" similarity="-1.0">
+    <t>Uma crian&#231;a jovem com cabelo preto est&#225; tirando uma foto com uma c&#226;mera</t>
+    <h>Uma crian&#231;a de cabelo de cor preta est&#225; tirando uma foto com uma c&#226;mera</h>
+  </pair>
+  <pair entailment="Unknown" id="70" similarity="-1.0">
+    <t>Os jogadores de r&#250;gbi est&#227;o se enfrentando</t>
+    <h>Um advers&#225;rio est&#225; atacando um jogador de futebol de campo</h>
+  </pair>
+  <pair entailment="Unknown" id="71" similarity="-1.0">
+    <t>Um homem com um chap&#233;u branco e uma camisa marrom est&#225; atr&#225;s de uma mulher de vermelho e est&#225; olhando para a esquerda</t>
+    <h>Um homem de chap&#233;u branco e camiseta marrom est&#225; atr&#225;s de uma mulher de vermelho e est&#225; olhando para o lado</h>
+  </pair>
+  <pair entailment="Unknown" id="72" similarity="-1.0">
+    <t>N&#227;o tem nenhum coelho brincando com um coelho de brinquedo</t>
+    <h>Um coelho est&#225; brincando com um coelho de brinquedo</h>
+  </pair>
+  <pair entailment="Unknown" id="73" similarity="-1.0">
+    <t>Um animal com um cobertor tingido de azul est&#225; correndo pela grama</t>
+    <h>Um animal com um cobertor azul est&#225; correndo pela grama</h>
+  </pair>
+  <pair entailment="Unknown" id="74" similarity="-1.0">
+    <t>Um buldogue est&#225; sendo escovado pelo macaco</t>
+    <h>O macaco est&#225; escovando um buldogue</h>
+  </pair>
+  <pair entailment="Unknown" id="75" similarity="-1.0">
+    <t>Um jovem casal est&#225; deitado na grama</t>
+    <h>O casal est&#225; deitado na grama junto</h>
+  </pair>
+  <pair entailment="Unknown" id="76" similarity="-1.0">
+    <t>N&#227;o tem nenhum homem andando de moto</t>
+    <h>Os homens est&#227;o jogando futebol</h>
+  </pair>
+  <pair entailment="Unknown" id="77" similarity="-1.0">
+    <t>Um cara est&#225; correndo estrada abaixo</t>
+    <h>Um cara est&#225; correndo</h>
+  </pair>
+  <pair entailment="Unknown" id="78" similarity="-1.0">
+    <t>Uma pessoa est&#225; tocando uma flauta</t>
+    <h>Um indiv&#237;duo est&#225; tocando flauta</h>
+  </pair>
+  <pair entailment="Unknown" id="79" similarity="-1.0">
+    <t>Uma menina est&#225; cortando uma cenoura manteiga em duas partes</t>
+    <h>Uma garota est&#225; cortando a cenoura em dois peda&#231;os</h>
+  </pair>
+  <pair entailment="Unknown" id="80" similarity="-1.0">
+    <t>O homem est&#225; concedendo uma entrevista</t>
+    <h>Um carro branco est&#225; sendo dirigido por um homem</h>
+  </pair>
+  <pair entailment="Unknown" id="81" similarity="-1.0">
+    <t>Um cachorro est&#225; correndo por um campo e est&#225; perseguindo uma bola</t>
+    <h>Um animal est&#225; indo em dire&#231;&#227;o a um brinquedo</h>
+  </pair>
+  <pair entailment="Unknown" id="82" similarity="-1.0">
+    <t>Vegetais verdes est&#227;o sendo misturados em uma panela por um homem</t>
+    <h>Um cara est&#225; misturando vegetais em uma panela</h>
+  </pair>
+  <pair entailment="Unknown" id="83" similarity="-1.0">
+    <t>Um l&#234;mure est&#225; lambendo o dedo de uma pessoa</t>
+    <h>Um l&#234;mure est&#225; mordendo o dedo de uma pessoa</h>
+  </pair>
+  <pair entailment="Unknown" id="84" similarity="-1.0">
+    <t>Um coelho est&#225; correndo cansadamente em c&#237;rculos</t>
+    <h>Um animal est&#225; correndo em c&#237;rculos</h>
+  </pair>
+  <pair entailment="Unknown" id="85" similarity="-1.0">
+    <t>Um homem e uma menina est&#227;o dando um aperto de m&#227;os</t>
+    <h>Duas pessoas est&#227;o dando um aperto de m&#227;os</h>
+  </pair>
+  <pair entailment="Unknown" id="86" similarity="-1.0">
+    <t>Uma mulher est&#225; cortando um lim&#227;o</t>
+    <h>Um homem est&#225; cortando um lim&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="87" similarity="-1.0">
+    <t>Uma mulher est&#225; pilotando uma moto aqu&#225;tica</t>
+    <h>Uma mulher est&#225; pilotando uma moto para &#225;gua</h>
+  </pair>
+  <pair entailment="Unknown" id="88" similarity="-1.0">
+    <t>Um refrigerante est&#225; sendo aberto e tomado por uma senhora</t>
+    <h>Uma senhora est&#225; abrindo um refrigerante e o bebendo</h>
+  </pair>
+  <pair entailment="Unknown" id="89" similarity="-1.0">
+    <t>Um filhote de cachorro castanho est&#225; roendo um poste de madeira que est&#225; preso no ch&#227;o</t>
+    <h>Um filhote de cachorro castanho est&#225; mordendo um poste</h>
+  </pair>
+  <pair entailment="Unknown" id="90" similarity="-1.0">
+    <t>Uma menina loira est&#225; pegando ondas</t>
+    <h>Uma garota loira est&#225; surfando</h>
+  </pair>
+  <pair entailment="Unknown" id="91" similarity="-1.0">
+    <t>Uma vaqueira est&#225; montando um cavalo marrom e est&#225; dando a volta em um barril</t>
+    <h>Uma vaqueira est&#225; montando a cavalo</h>
+  </pair>
+  <pair entailment="Unknown" id="92" similarity="-1.0">
+    <t>Uma senhora est&#225; amalgamando ovos</t>
+    <h>Uma senhora est&#225; misturando ovos</h>
+  </pair>
+  <pair entailment="Unknown" id="93" similarity="-1.0">
+    <t>Um homem em uma pose est&#225; sendo divertidamente assistido por outro homem</t>
+    <h>Um homem fazendo uma pose est&#225; sendo observado por outro</h>
+  </pair>
+  <pair entailment="Unknown" id="94" similarity="-1.0">
+    <t>Um cara est&#225; acariciando dois cachorros</t>
+    <h>Dois cachorros est&#227;o sendo acariciados por um cara</h>
+  </pair>
+  <pair entailment="Unknown" id="95" similarity="-1.0">
+    <t>Um homem n&#227;o est&#225; cortando uma cebola</t>
+    <h>Um homem est&#225; abrindo uma porta</h>
+  </pair>
+  <pair entailment="Unknown" id="96" similarity="-1.0">
+    <t>O homem n&#227;o est&#225; de p&#233; em uma montanha rochosa e nuvens cinzas n&#227;o est&#227;o ao fundo</t>
+    <h>Uma pessoa de topless com uma mochila est&#225; em frente a uma pilha de pedras e nuvens est&#227;o ao fundo</h>
+  </pair>
+  <pair entailment="Unknown" id="97" similarity="-1.0">
+    <t>Um jovem menino est&#225; cantando e tocando viol&#227;o</t>
+    <h>N&#227;o tem nenhum menino jovem cantando e tocando viol&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="98" similarity="-1.0">
+    <t>A bola est&#225; sendo enterrada por um cara com uma camisa de time em um jogo de basquete</t>
+    <h>Um cara com uma camisa de time est&#225; enterrando uma bola em um jogo de basquete</h>
+  </pair>
+  <pair entailment="Unknown" id="99" similarity="-1.0">
+    <t>A multid&#227;o est&#225; assistindo dois carros de corrida que est&#227;o deixando a linha de partida</t>
+    <h>Algumas pessoas em uma corrida de arrancada est&#227;o olhando para as chamas que est&#227;o saindo dos carros</h>
+  </pair>
+  <pair entailment="Unknown" id="100" similarity="-1.0">
+    <t>Uma menina est&#225; mostrando um cachorro com pelo muito longo em uma exposi&#231;&#227;o canina</t>
+    <h>Um cachorro com pelo muito longo est&#225; sendo exibido por uma menina em uma exposi&#231;&#227;o canina</h>
+  </pair>
+  <pair entailment="Unknown" id="101" similarity="-1.0">
+    <t>Dois homens est&#227;o lutando</t>
+    <h>Alguns homens est&#227;o batalhando</h>
+  </pair>
+  <pair entailment="Unknown" id="102" similarity="-1.0">
+    <t>Uma grande bola verde est&#225; atingindo uma batata</t>
+    <h>Uma grande bola da cor verde est&#225; batendo em uma batata</h>
+  </pair>
+  <pair entailment="Unknown" id="103" similarity="-1.0">
+    <t>Uma menina est&#225; comendo um bolinho</t>
+    <h>Uma mulher est&#225; comendo um bolinho</h>
+  </pair>
+  <pair entailment="Unknown" id="104" similarity="-1.0">
+    <t>Alguma comida mexicana est&#225; sendo preparada por um chefe</t>
+    <h>Um chefe est&#225; preparando alguma comida</h>
+  </pair>
+  <pair entailment="Unknown" id="105" similarity="-1.0">
+    <t>Um macaco est&#225; chutando uma pessoa</t>
+    <h>Um macaco est&#225; praticando artes marciais</h>
+  </pair>
+  <pair entailment="Unknown" id="106" similarity="-1.0">
+    <t>Quatro atletas est&#227;o com uma mulher em um est&#225;dio lotado</t>
+    <h>Uma pessoa de jaqueta rosa est&#225; correndo para o campo</h>
+  </pair>
+  <pair entailment="Unknown" id="107" similarity="-1.0">
+    <t>Um cachorro preto e branco est&#225; brincando com uma bola de v&#244;lei destru&#237;da em um campo marrom</t>
+    <h>Um cachorro preto e branco est&#225; brincando com uma bola de voleibol esfarrapada</h>
+  </pair>
+  <pair entailment="Unknown" id="108" similarity="-1.0">
+    <t>Um homem e uma mulher est&#227;o dirigindo pela estrada abaixo em um carro</t>
+    <h>Um homem e uma mulher est&#227;o dirigindo pela estrada abaixo em um ve&#237;culo sem teto</h>
+  </pair>
+  <pair entailment="Unknown" id="109" similarity="-1.0">
+    <t>Um homem est&#225; tocando bateria</t>
+    <h>Um homem est&#225; tocando viol&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="110" similarity="-1.0">
+    <t>Um cara est&#225; esguichando &#225;gua na boca de um cachorro branco com uma pistola de &#225;gua</t>
+    <h>A &#225;gua est&#225; sendo esguichada por um cara na boca de um cachorro branco com uma pistola de &#225;gua</h>
+  </pair>
+  <pair entailment="Unknown" id="111" similarity="-1.0">
+    <t>Um filhote de cachorro castanho est&#225; puxando um poste met&#225;lico que est&#225; preso no ch&#227;o</t>
+    <h>Um filhote de cachorro est&#225; mordendo um poste</h>
+  </pair>
+  <pair entailment="Unknown" id="112" similarity="-1.0">
+    <t>A pista de patina&#231;&#227;o colocada ao ar livre est&#225; cheia de pessoas</t>
+    <h>Muitas pessoas est&#227;o em um parque de patina&#231;&#227;o</h>
+  </pair>
+  <pair entailment="Unknown" id="113" similarity="-1.0">
+    <t>Uma mulher est&#225; cortando batatas</t>
+    <h>N&#227;o tem nenhuma mulher cortando batatas</h>
+  </pair>
+  <pair entailment="Unknown" id="114" similarity="-1.0">
+    <t>Uma menina de idade est&#225; sentada em um banco e est&#225; vestindo uma jaqueta cinza e cal&#231;a preta</t>
+    <h>A menina est&#225; sentada em um banco e est&#225; usando uma jaqueta cinza e cal&#231;a preta</h>
+  </pair>
+  <pair entailment="Unknown" id="115" similarity="-1.0">
+    <t>Um coelho est&#225; brincando com um coelho de pel&#250;cia</t>
+    <h>N&#227;o tem nenhum coelho brincando com um coelhinho de pel&#250;cia</h>
+  </pair>
+  <pair entailment="Unknown" id="116" similarity="-1.0">
+    <t>Um homem em uma bicicleta esportiva amarela est&#225; empinando e um amigo em uma bicicleta preta est&#225; se aproximando</t>
+    <h>Um ciclista em uma bicicleta esportiva amarela est&#225; empinando e seu amigo em uma bicicleta negra est&#225; se aproximando</h>
+  </pair>
+  <pair entailment="Unknown" id="117" similarity="-1.0">
+    <t>Um c&#227;o est&#225; nadando em um lago e o sol est&#225; brilhando nele</t>
+    <h>O c&#227;o est&#225; nadando e o sol est&#225; brilhando nele</h>
+  </pair>
+  <pair entailment="Unknown" id="118" similarity="-1.0">
+    <t>Ningu&#233;m est&#225; cozinhando o quiabo em uma frigideira</t>
+    <h>Algu&#233;m est&#225; cozinhando o quiabo em uma panela</h>
+  </pair>
+  <pair entailment="Unknown" id="119" similarity="-1.0">
+    <t>Duas meninas e uma senhora est&#227;o dan&#231;ando</t>
+    <h>Tr&#234;s mulheres est&#227;o dan&#231;ando</h>
+  </pair>
+  <pair entailment="Unknown" id="120" similarity="-1.0">
+    <t>Uma menina est&#225; acordando</t>
+    <h>Uma menina n&#227;o est&#225; caindo no sono</h>
+  </pair>
+  <pair entailment="Unknown" id="121" similarity="-1.0">
+    <t>O garoto &#233; abruptamente derrubado de um cavalo</t>
+    <h>O garoto est&#225; sendo derrubado do animal</h>
+  </pair>
+  <pair entailment="Unknown" id="122" similarity="-1.0">
+    <t>Um homem est&#225; montando um touro mec&#226;nico</t>
+    <h>Um homem est&#225; tocando teclados</h>
+  </pair>
+  <pair entailment="Unknown" id="123" similarity="-1.0">
+    <t>A senhora est&#225; tocando um viol&#227;o, que &#233; ac&#250;stico, e cantando</t>
+    <h>Uma pessoa est&#225; tocando um viol&#227;o e cantando</h>
+  </pair>
+  <pair entailment="Unknown" id="124" similarity="-1.0">
+    <t>Uma mulher est&#225; dan&#231;ando perto de um fogo</t>
+    <h>N&#227;o h&#225; nenhuma mulher dan&#231;ando perto de uma fogueira</h>
+  </pair>
 </entailment-corpus>
