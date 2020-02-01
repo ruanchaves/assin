@@ -22,7 +22,8 @@ python build_settings.py
 cd ..
 
 mkdir ../$DATE
-cp -r * ../$DATE
+shopt -s extglob
+cp -r *!(20*) ../$DATE
 mv ../$DATE .
 cd $DATE
 
