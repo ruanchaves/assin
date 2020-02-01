@@ -1,0 +1,10 @@
+<entailment-corpus>
+  <pair entailment="Unknown" id="0" similarity="-1.0">
+    <t>O cachorro caramelo est&#225; assistindo um cachorro castanho que est&#225; nadando em uma lagoa</t>
+    <h>Um cachorro de estima&#231;&#227;o est&#225; de p&#233; no banco e est&#225; olhando outro cachorro, que &#233; castanho, na lagoa</h>
+  </pair>
+  <pair entailment="Unknown" id="1" similarity="-1.0">
+    <t>O cara est&#225; fazendo exerc&#237;cios no ch&#227;o</t>
+    <h>Um cara est&#225; fazendo exerc&#237;cios</h>
+  </pair>
+</entailment-corpus>

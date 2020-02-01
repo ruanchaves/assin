@@ -38,6 +38,10 @@ path_list_dict = {
     "assin-ptpt": [
             "assin-ptpt-train.xml",
             "assin-ptpt-blind-test.xml"        
+    ],
+    "toy": [
+        "toy-train.xml",
+        "toy-blind-test.xml"
     ]
 }
 

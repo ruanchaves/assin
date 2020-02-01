@@ -11,6 +11,11 @@ then
 elif [[ $DATASET == 'assin-ptpt' ]]
 then
     TEST_FILE='./sources/assin-ptpt-test.xml'
+
+elif [[ $DATASET == 'toy' ]]
+then
+    TEST_FILE='./sources/toy-test.xml'
+
 else
     exit 1
 fi
