@@ -31,29 +31,29 @@ cd $DATE
 python assin.py settings/settings.json
 python final_submission.py
 
-# mkdir -p ./submission
+mkdir -p ./submission
 
-# echo 'ENSEMBLE - STACKING: ' >> ./submission/result.txt
-# python assin-eval.py  assin2-test.xml ./submission/submission-ensemble.xml >> ./submission/result.txt
+echo 'ENSEMBLE - STACKING: ' >> ./submission/result.txt
+python assin-eval.py  $TEST_FILE ./submission/submission-ensemble.xml >> ./submission/result.txt
 
-# echo 'ENSEMBLE - AVERAGE: ' >> ./submission/result.txt
-# python assin-eval.py  assin2-test.xml ./submission/submission-average.xml >> ./submission/result.txt
+echo 'ENSEMBLE - AVERAGE: ' >> ./submission/result.txt
+python assin-eval.py  $TEST_FILE ./submission/submission-average.xml >> ./submission/result.txt
 
-# echo 'PORTUGUESE MODEL: ' >> ./submission/result.txt
-# python assin-eval.py  assin2-test.xml ./submission/submission-portuguese.xml >> ./submission/result.txt
+echo 'PORTUGUESE MODEL: ' >> ./submission/result.txt
+python assin-eval.py  $TEST_FILE ./submission/submission-portuguese.xml >> ./submission/result.txt
 
-# echo 'ENGLISH MODEL: ' >> ./submission/result.txt
-# python assin-eval.py  assin2-test.xml ./submission/submission-english.xml >> ./submission/result.txt
+echo 'ENGLISH MODEL: ' >> ./submission/result.txt
+python assin-eval.py  $TEST_FILE ./submission/submission-english.xml >> ./submission/result.txt
 
-# echo 'END TIME: ' >> ./submission/result.txt
-# now_timestamp=$(date +%Y%m%d_%H%M%S)
-# echo $now_timestamp >> ./submission/result.txt
+echo 'END TIME: ' >> ./submission/result.txt
+now_timestamp=$(date +%Y%m%d_%H%M%S)
+echo $now_timestamp >> ./submission/result.txt
 
-# mv settings/settings.json ./submission/
-# mv settings/config.yml ./submission/
+mv settings/settings.json ./submission/
+mv settings/config.yml ./submission/
 
-# mkdir submission_$timestamp
-# mv ./submission/* submission_$timestamp
-# mv submission_$timestamp ..
-# cd ..
-# rm -rf $DATE
+mkdir submission_$timestamp
+mv ./submission/* submission_$timestamp
+mv submission_$timestamp ..
+cd ..
+rm -rf $DATE
