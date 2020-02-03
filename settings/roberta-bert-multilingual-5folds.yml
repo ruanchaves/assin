@@ -4,7 +4,7 @@
 workers: 3
 
 # Ensemble parameters
-# More folds tend to increase accuracy, but the fine-tuning process will take longer.
+# More folds will increase accuracy, but the fine-tuning process will take longer.
 ensemble_folds: 5
 
 # Transformer parameters
