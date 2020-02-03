@@ -14,7 +14,7 @@ fi
 
 if [[ -z $build_test ]] && [[ ! -z $ps_test ]]; then 
     docker build -t ruanchaves/assin:2.0 .
-elif [[ -z $build_test ]] && [[ -z $ps_test ]]; then 
+elif [[ -z $build_test ]] && [[ -z $ps_test ]]; then
     sudo docker build -t ruanchaves/assin:2.0 .
 fi
 
