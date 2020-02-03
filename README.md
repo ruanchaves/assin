@@ -23,7 +23,7 @@ or, if you can only run Docker as root:
 sudo PREFIX=roberta-portuguese CUDA_VISIBLE_DEVICES=0 bash scripts/start.sh
 ```
 
-This command will perform all fine-tuning procedures specified on the configuration files in the `settings` folder over all datasets ( `assin2`, `assin-ptpt` and `assin-ptbr` ). Configuration files with a name that does not start with `PREFIX` will be ignored.
+This command will perform all fine-tuning procedures specified on the configuration files in the `settings` folder over all datasets ( `assin2`, `assin-ptpt` and `assin-ptbr` ). Configuration files with a name that does not start with `PREFIX` will be ignored. If the image `ruanchaves/assin:2.0` does not exist, it will be created.
 
 Depending on your resources, you may want change the maximum amount of parallel workers allowed on each configuration file. Generally speaking, each worker will consume at most 8 gigabytes of GPU memory.
 
