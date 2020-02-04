@@ -4,7 +4,7 @@ cd ..
 DOCKER_MAJOR_VERSION=$(docker -v | grep -oP '([0-9]+)' | sed -n 1p)
 DOCKER_MINOR_VERSION=$(docker -v | grep -oP '([0-9]+)' | sed -n 2p)
 ps_test=$(docker ps -a)
-datasets=("assin2" "assin-ptpt" "assin-ptbr")
+datasets=("assin-ptpt" "assin-ptbr")
 
 if [[ ! -z $ps_test ]]; then
     build_test=$(docker image ls | grep 'ruanchaves/assin.*2.0')
