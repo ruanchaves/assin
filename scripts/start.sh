@@ -24,7 +24,10 @@ fi
 config_files=(settings/$PREFIX*.yml)
 for dataset in ${datasets[@]}; do
     for filename in ${config_files[@]}; do
+        echo $dataset
+        echo $filename
         single_filename="${filename##*/}"
+        echo $single_filename
         CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
         if [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
             echo "docker run --gpus all 
@@ -79,5 +82,6 @@ for dataset in ${datasets[@]}; do
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
         fi
+        echo "Not found."
     done
 done
