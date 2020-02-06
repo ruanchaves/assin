@@ -89,7 +89,11 @@ def conv_template(lang, dataset, task, buckets):
         }
     if lang == 'en':
         template["translate"] = True
-        template["dictionary_file"] = "./sources/dictionary.json"
+        try:
+            os.environ['DICTIONARY_FILE']
+            template["dictionary_file"] = './sources/' + os.environ['DICTIONARY_FILE']
+        except:
+            template["dictionary_file"] = "./sources/dictionary.json"
     elif lang == 'pt':
         template["translate"] = False
     return template
