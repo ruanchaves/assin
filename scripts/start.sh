@@ -81,7 +81,8 @@ for dataset in ${datasets[@]}; do
                 --env CONFIG=$single_filename \
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
+        else
+            echo "Not found."
         fi
-        echo "Not found."
     done
 done
