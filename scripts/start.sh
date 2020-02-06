@@ -27,6 +27,10 @@ for dataset in ${datasets[@]}; do
         single_filename="${filename##*/}"
         echo $single_filename
         CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
+        echo $CUDA_VISIBLE_DEVICES
+        echo $ps_test
+        echo $DOCKER_MAJOR_VERSION
+        echo $DOCKER_MINOR_VERSION
         if [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
             docker run --gpus all \
                 -v `pwd`:/home \
