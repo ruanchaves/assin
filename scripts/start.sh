@@ -9,6 +9,16 @@ datasets=("assin-ptbr" "assin-ptpt")
 DOCKER_MAJOR_VERSION=$((10#$DOCKER_MAJOR_VERSION_STRING))
 DOCKER_MINOR_VERSION=$((10#$DOCKER_MINOR_VERSION_STRING))
 
+if [[ $DOCKER_MAJOR_VERSION -ge 19  ]]; then
+    if [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
+        recent_version=1
+    else
+        recent_version=0
+    fi
+else
+    recent_version=0
+fi 
+
 if [[ ! -z $ps_test ]]; then
     build_test=$(docker image ls | grep 'ruanchaves/assin.*2.0')
 else
@@ -29,52 +39,28 @@ for dataset in ${datasets[@]}; do
         single_filename="${filename##*/}"
         echo $single_filename
         CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
-        if [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
-            echo "docker run --gpus all 
-                -v `pwd`:/home 
-                --env DATASET=$dataset 
-                --env CONFIG=$single_filename 
-                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
-                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
+        if [[ -n $ps_test ]] && [[ $recent_version -eq 1 ]]; then
             docker run --gpus all \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
                 --env CONFIG=$single_filename \
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
-        elif [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -le 19 ]] && [[ $DOCKER_MINOR_VERSION -le 2 ]]; then
-            echo "nvidia-docker run 
-                -v `pwd`:/home 
-                --env DATASET=$dataset 
-                --env CONFIG=$single_filename 
-                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
-                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
+        elif [[ -n $ps_test ]] && [[ $recent_version -eq 0 ]]; then
             nvidia-docker run \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
                 --env CONFIG=$single_filename \
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
-        elif [[ -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
-            echo "sudo docker run --gpus all 
-                -v `pwd`:/home 
-                --env DATASET=$dataset 
-                --env CONFIG=$single_filename 
-                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
-                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
+        elif [[ -z $ps_test ]] && [[ $recent_version -eq 1 ]]; then
             sudo -E docker run --gpus all \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
                 --env CONFIG=$single_filename \
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
-        elif [[ -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -le 19 ]] && [[ $DOCKER_MINOR_VERSION -le 2 ]]; then
-            echo "sudo nvidia-docker run 
-                -v `pwd`:/home 
-                --env DATASET=$dataset 
-                --env CONFIG=$single_filename 
-                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
-                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
+        elif [[ -z $ps_test ]] && [[ $recent_version -eq 0 ]]; then
             sudo -E nvidia-docker run \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
