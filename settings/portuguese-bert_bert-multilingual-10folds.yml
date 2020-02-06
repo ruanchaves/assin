@@ -3,7 +3,7 @@
 # Run this test with the environment variable DICTIONARY_FILE=pseudodictionary.json
 
 # each worker requires about 8GB of GPU memory
-workers: 5
+workers: 3
 
 # Ensemble parameters
 # More folds will increase accuracy, but the fine-tuning process will take longer.
