@@ -15,6 +15,7 @@ elif [[ $DATASET == 'toy' ]]
 then
     TEST_FILE='./sources/toy-test.xml'
 else
+    echo 'Dataset not found.'
     exit 1
 fi
 
