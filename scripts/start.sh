@@ -27,6 +27,12 @@ for dataset in ${datasets[@]}; do
         single_filename="${filename##*/}"
         CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
         if [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
+            echo "docker run --gpus all 
+                -v `pwd`:/home 
+                --env DATASET=$dataset 
+                --env CONFIG=$single_filename 
+                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
+                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
             docker run --gpus all \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
@@ -34,6 +40,12 @@ for dataset in ${datasets[@]}; do
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
         elif [[ ! -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -le 19 ]] && [[ $DOCKER_MINOR_VERSION -le 2 ]]; then
+            echo "nvidia-docker run 
+                -v `pwd`:/home 
+                --env DATASET=$dataset 
+                --env CONFIG=$single_filename 
+                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
+                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
             nvidia-docker run \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
@@ -41,6 +53,12 @@ for dataset in ${datasets[@]}; do
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
         elif [[ -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -ge 19 ]] && [[ $DOCKER_MINOR_VERSION -ge 3 ]]; then
+            echo "sudo docker run --gpus all 
+                -v `pwd`:/home 
+                --env DATASET=$dataset 
+                --env CONFIG=$single_filename 
+                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
+                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
             sudo -E docker run --gpus all \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
@@ -48,6 +66,12 @@ for dataset in ${datasets[@]}; do
                 --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES \
                 -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh
         elif [[ -z $ps_test ]] && [[ $DOCKER_MAJOR_VERSION -le 19 ]] && [[ $DOCKER_MINOR_VERSION -le 2 ]]; then
+            echo "sudo nvidia-docker run 
+                -v `pwd`:/home 
+                --env DATASET=$dataset 
+                --env CONFIG=$single_filename 
+                --env CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES 
+                -it --rm ruanchaves/assin:2.0 bash /home/scripts/run_assin.sh"
             sudo -E nvidia-docker run \
                 -v `pwd`:/home \
                 --env DATASET=$dataset \
