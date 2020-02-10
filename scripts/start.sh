@@ -4,7 +4,7 @@ cd ..
 DOCKER_MAJOR_VERSION_STRING=$(docker -v | grep -oP '([0-9]+)' | sed -n 1p)
 DOCKER_MINOR_VERSION_STRING=$(docker -v | grep -oP '([0-9]+)' | sed -n 2p)
 ps_test=$(docker ps -a)
-datasets=("assin-ptbr" "assin-ptpt")
+datasets=("assin2" "assin-ptbr" "assin-ptpt")
 
 DOCKER_MAJOR_VERSION=$((10#$DOCKER_MAJOR_VERSION_STRING))
 DOCKER_MINOR_VERSION=$((10#$DOCKER_MINOR_VERSION_STRING))
