@@ -1,3 +1,4 @@
 *.pyc
 /2020*
 /tmp_training_*
+/submission_*
