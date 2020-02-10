@@ -1,0 +1,46 @@
+ENSEMBLE - STACKING: 
+
+RTE evaluation
+Accuracy	Macro F1
+--------	--------
+  88.75%	    0.56
+
+Similarity evaluation
+Pearson		Mean Squared Error
+-------		------------------
+   0.86		              0.22
+ENSEMBLE - AVERAGE: 
+
+RTE evaluation
+Accuracy	Macro F1
+--------	--------
+  83.25%	    0.46
+
+Similarity evaluation
+Pearson		Mean Squared Error
+-------		------------------
+   0.86		              0.22
+PORTUGUESE MODEL: 
+
+RTE evaluation
+Accuracy	Macro F1
+--------	--------
+  83.65%	    0.46
+
+Similarity evaluation
+Pearson		Mean Squared Error
+-------		------------------
+   0.81		              0.27
+ENGLISH MODEL: 
+
+RTE evaluation
+Accuracy	Macro F1
+--------	--------
+  88.80%	    0.56
+
+Similarity evaluation
+Pearson		Mean Squared Error
+-------		------------------
+   0.84		              0.23
+END TIME: 
+20200207_192613
