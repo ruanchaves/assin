@@ -459,13 +459,6 @@ def main():
         required=True,
         help="The output directory where the model predictions and checkpoints will be written.",
     )
-    parser.add_argument(
-        "--logging_file",
-        default=None,
-        type=str,
-        required=True,
-        help="The output file where the model logs will be written.",
-    )
 
     # Other parameters
     parser.add_argument(
@@ -594,7 +587,7 @@ def main():
 
     # Setup logging
     logging.basicConfig(
-        filename="{0}.log".format(args.logging_file)
+        filename="{0}.log".format(os.environ['LOG_PATH'])
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO if args.local_rank in [-1, 0] else logging.WARN,
