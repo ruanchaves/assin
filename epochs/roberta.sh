@@ -4,9 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/en
 export TASK_NAME=STS-B
 
-echo $(date -u) >> $GLUE_DIR/$LOG_FILE
-
-python -u run_glue.py \
+python run_glue.py \
     --model_type roberta \
     --model_name_or_path roberta-large \
     --task_name $TASK_NAME \
@@ -28,4 +26,5 @@ python -u run_glue.py \
     --overwrite_output_dir \
     --eval_all_checkpoints \
     --evaluate_during_training \
-    --output_dir $GLUE_DIR/tmp/roberta/ >> $GLUE_DIR/$LOG_FILE
+    --log_file_full_path $GLUE_DIR/$LOG_FILE \
+    --output_dir $GLUE_DIR/tmp/roberta/

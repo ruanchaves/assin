@@ -69,7 +69,6 @@ try:
 except ImportError:
     from tensorboardX import SummaryWriter
 
-
 logger = logging.getLogger(__name__)
 
 ALL_MODELS = sum(
@@ -551,6 +550,7 @@ def main():
     parser.add_argument("--local_rank", type=int, default=-1, help="For distributed training: local_rank")
     parser.add_argument("--server_ip", type=str, default="", help="For distant debugging.")
     parser.add_argument("--server_port", type=str, default="", help="For distant debugging.")
+    parser.add_argument("--log_file_full_path", type=str, default="result.log", help="Full path to the log file.")
     # parser.add_argument('--save_file', type=str, default='', help="Save results file name.")
     args = parser.parse_args()
 
@@ -588,6 +588,7 @@ def main():
 
     # Setup logging
     logging.basicConfig(
+        filename=args.log_file_full_path
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO if args.local_rank in [-1, 0] else logging.WARN,
