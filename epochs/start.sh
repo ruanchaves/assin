@@ -32,7 +32,7 @@ fi
 
 
 CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
-SCRIPT_FILE=/home/epochs/$SCRIPT_FILE
+SCRIPT_FILE=$SCRIPT_FILE
 LOG_FILE=$LOG_FILE
 
 if [[ -n $ps_test ]] && [[ $recent_version -eq 1 ]]; then
