@@ -4,7 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/en
 export TASK_NAME=STS-B
 
-python ./examples/run_glue.py \
+python run_glue.py \
     --model_type roberta \
     --model_name_or_path roberta-large \
     --task_name $TASK_NAME \

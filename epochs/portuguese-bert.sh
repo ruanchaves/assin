@@ -4,7 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/pt
 export TASK_NAME=STS-B
 
-python ./examples/run_glue.py \
+python run_glue.py \
     --model_type bert \
     --model_name_or_path neuralmind/bert-large-portuguese-cased \
     --task_name $TASK_NAME \
