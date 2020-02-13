@@ -23,6 +23,7 @@ python -u run_glue.py \
     --overwrite_cache \
     --overwrite_output_dir \
     --eval_all_checkpoints \
+    --evaluate_during_training \
     --logging_steps 400 \
     --save_steps 3000 \
     --output_dir $GLUE_DIR/tmp/portuguese-bert/ >> $GLUE_DIR/$LOG_FILE

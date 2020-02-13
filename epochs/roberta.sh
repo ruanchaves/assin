@@ -27,4 +27,5 @@ python -u run_glue.py \
     --overwrite_cache \
     --overwrite_output_dir \
     --eval_all_checkpoints \
+    --evaluate_during_training \
     --output_dir $GLUE_DIR/tmp/roberta/ >> $GLUE_DIR/$LOG_FILE
