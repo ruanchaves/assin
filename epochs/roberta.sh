@@ -26,5 +26,5 @@ python run_glue.py \
     --overwrite_output_dir \
     --eval_all_checkpoints \
     --evaluate_during_training \
-    --log_file_full_path "$GLUE_DIR/$LOG_FILE" \
+    --log_file_full_path="$GLUE_DIR/$LOG_FILE" \
     --output_dir $GLUE_DIR/tmp/roberta/

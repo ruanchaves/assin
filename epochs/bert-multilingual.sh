@@ -24,5 +24,5 @@ python run_glue.py \
     --evaluate_during_training \
     --logging_steps 400 \
     --save_steps 3000 \
-    --logging_file "$GLUE_DIR/$LOG_FILE" \
+    --logging_file="$GLUE_DIR/$LOG_FILE" \
     --output_dir $GLUE_DIR/tmp/bert-multilingual/

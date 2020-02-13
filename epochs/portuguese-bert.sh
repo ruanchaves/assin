@@ -24,5 +24,5 @@ python run_glue.py \
     --evaluate_during_training \
     --logging_steps 400 \
     --save_steps 3000 \
-    --log_file_full_path "$GLUE_DIR/$LOG_FILE" \
+    --log_file_full_path="$GLUE_DIR/$LOG_FILE" \
     --output_dir $GLUE_DIR/tmp/portuguese-bert/
