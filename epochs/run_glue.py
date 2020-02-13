@@ -594,7 +594,7 @@ def main():
 
     # Setup logging
     logging.basicConfig(
-        filename=args.logging_file
+        filename="{0}.log".format(args.logging_file)
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO if args.local_rank in [-1, 0] else logging.WARN,
