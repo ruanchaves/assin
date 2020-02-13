@@ -4,7 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/pt
 export TASK_NAME=STS-B
 
-python run_glue.py \
+python -u run_glue.py \
     --model_type bert \
     --model_name_or_path bert-base-multilingual-cased \
     --task_name $TASK_NAME \
@@ -18,4 +18,9 @@ python run_glue.py \
     --gradient_accumulation_steps=8 \
     --learning_rate 2e-5 \
     --num_train_epochs 100.0 \
-    --output_dir $GLUE_DIR/tmp/bert-multilingual/ > $GLUE_DIR/$LOG_FILE
+    --overwrite_cache \
+    --overwrite_output_dir \
+    --eval_all_checkpoints \
+    --logging_steps 400 \
+    --save_steps 3000 \
+    --output_dir $GLUE_DIR/tmp/bert-multilingual/ >> $GLUE_DIR/$LOG_FILE

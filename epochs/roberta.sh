@@ -4,7 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/en
 export TASK_NAME=STS-B
 
-python run_glue.py \
+python -u run_glue.py \
     --model_type roberta \
     --model_name_or_path roberta-large \
     --task_name $TASK_NAME \
@@ -22,4 +22,7 @@ python run_glue.py \
     --data_dir $GLUE_DIR/$TASK_NAME \
     --max_seq_length 128 \
     --num_train_epochs 100.0 \
-    --output_dir $GLUE_DIR/tmp/roberta/ > $GLUE_DIR/$LOG_FILE
+    --overwrite_cache \
+    --overwrite_output_dir \
+    --eval_all_checkpoints \
+    --output_dir $GLUE_DIR/tmp/roberta/ >> $GLUE_DIR/$LOG_FILE
