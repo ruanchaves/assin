@@ -585,6 +585,7 @@ def main():
         args.n_gpu = 1
     args.device = device
 
+    reload(logging)
     # Setup logging
     logging.basicConfig(
         filename="{0}.log".format(os.environ['LOG_PATH'])
