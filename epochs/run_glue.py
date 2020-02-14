@@ -588,7 +588,7 @@ def main():
     reload(logging)
     # Setup logging
     logging.basicConfig(
-        filename="{0}.log".format(os.environ['LOG_PATH'])
+        filename="{0}.log".format(os.environ['LOG_PATH']),
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.DEBUG,
