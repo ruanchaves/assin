@@ -1,5 +1,4 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
-cd ..
 
 export GLUE_DIR=/home/epochs/pt
 export TASK_NAME=STS-B
