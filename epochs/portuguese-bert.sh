@@ -4,7 +4,7 @@ cd ..
 export GLUE_DIR=/home/epochs/pt
 export TASK_NAME=STS-B
 
-python -u run_glue.py \
+LOG_PATH=$GLUE_DIR/$LOG_FILE python run_glue.py \
     --model_type bert \
     --model_name_or_path neuralmind/bert-large-portuguese-cased \
     --task_name $TASK_NAME \
@@ -24,4 +24,4 @@ python -u run_glue.py \
     --evaluate_during_training \
     --logging_steps 400 \
     --save_steps 3000 \
-    --output_dir $GLUE_DIR/tmp/portuguese-bert/ >> $GLUE_DIR/$LOG_FILE 
+    --output_dir $GLUE_DIR/tmp/portuguese-bert/
