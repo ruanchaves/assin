@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 import json
 import sys
+import os
+
+dataset = os.environ['DATASET']
 
 def get_data(s1=None, s2=None, arr=None, query=[]):
     s3 = []
@@ -25,11 +28,12 @@ def convert(source=None,
             target=None, 
             entailment_array=None, 
             similarity_array=None,
-            df_source='/run/media/user/DADOS/competition/assin_roberta/datasets/pt/assin2/similarity/subset/dev.tsv'):
+            df_source='./datasets/pt/{0}/similarity/subset/dev.tsv'.format(dataset)):
     
     entailment_dict = {
         0: 'None',
-        1: 'Entailment'
+        1: 'Entailment',
+        2: 'Paraphrase'
     }
 
     entailment_data = list(np.load(entailment_array))
@@ -57,23 +61,73 @@ def convert(source=None,
         pair.set('similarity', str(similarity_score))
     xml_source.write(target)
 
+def average(left, right, target):
+    entailment_dict = {
+        0: 'None',
+        1: 'Entailment',
+        2: 'Paraphrase'
+    }
+    reverse_entailment_dict = {
+        'None': 0,
+        'Entailment': 1,
+        'Paraphrase': 2
+    }
+
+    xml_source = ET.parse(left)
+    root = xml_source.getroot()
+    
+    similarity = []
+    entailment = []
+    for pair in root.iter('pair'):
+        entailment.append([float(reverse_entailment_dict[pair.get('entailment')])])
+        similarity.append([float(pair.get('similarity'))])
+    
+    xml_source = ET.parse(right)
+    root = xml_source.getroot()
+    for idx,pair in enumerate(root.iter('pair')):
+        entailment[idx].append(float(reverse_entailment_dict[pair.get('entailment')]))
+        similarity[idx].append(float(pair.get('similarity')))
+
+    for idx,item in enumerate(entailment):
+        value = int(np.mean(item))
+        entailment[idx] = entailment_dict[value]
+
+    for idx,item in enumerate(similarity):
+        similarity[idx] = str(np.mean(item))
+
+    xml_source = ET.parse(left)
+    root = xml_source.getroot()
+
+    for idx,pair in enumerate(root.iter('pair')):
+        entailment_score = entailment[idx]
+        similarity_score = similarity[idx]
+        pair.set('entailment', entailment_score)
+        pair.set('similarity', similarity_score)
+    xml_source.write(target)
+
 if __name__ == '__main__':
     convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-ensemble-5fold-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/ensemble/assin2/entailment/subset/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/ensemble/assin2/similarity/subset/model_preds.npy"
+        source="./sources/{0}-blind-test.xml".format(dataset),
+        target="./submission/submission-ensemble.xml",
+        entailment_array="./results/ensemble/{0}/entailment/subset/model_preds.npy".format(dataset),
+        similarity_array="./results/ensemble/{0}/similarity/subset/model_preds.npy".format(dataset)
     )
     convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-bert-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/pt/assin2/entailment/subset/original/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/pt/assin2/similarity/subset/original/model_preds.npy"
+        source="./sources/{0}-blind-test.xml".format(dataset),
+        target="./submission/submission-portuguese.xml",
+        entailment_array="./results/pt/{0}/entailment/subset/original/model_preds.npy".format(dataset),
+        similarity_array="./results/pt/{0}/similarity/subset/original/model_preds.npy".format(dataset)
     )
 
     convert(
-        source="/run/media/user/DADOS/competition/assin2-blind-test.xml",
-        target="/run/media/user/DADOS/competition/submission-roberta-corrected.xml",
-        entailment_array="/run/media/user/DADOS/competition/assin_roberta/results/en/assin2/entailment/subset/original/model_preds.npy",
-        similarity_array="/run/media/user/DADOS/competition/assin_roberta/results/en/assin2/similarity/subset/original/model_preds.npy"
+        source="./sources/{0}-blind-test.xml".format(dataset),
+        target="./submission/submission-english.xml",
+        entailment_array="./results/en/{0}/entailment/subset/original/model_preds.npy".format(dataset),
+        similarity_array="./results/en/{0}/similarity/subset/original/model_preds.npy".format(dataset)
+    )
+
+    average(
+        left="./submission/submission-english.xml",
+        right="./submission/submission-portuguese.xml",
+        target="./submission/submission-average.xml"
     )

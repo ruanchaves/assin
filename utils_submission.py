@@ -61,7 +61,6 @@ class SubmissionWriter(object):
         for pair in root.iter('pair'):
             test = pair.find('t').text
             hypothesis = pair.find('h').text
-            print(test, hypothesis)
             entailment_score = self.get_score(self.entailment_data, self.entailment_preds, test, hypothesis)
             similarity_score = self.get_score(self.similarity_data, self.similarity_preds, test, hypothesis)
             pair.set('entailment', entailment_dict[round(entailment_score)])

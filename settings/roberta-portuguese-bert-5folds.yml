@@ -1,0 +1,57 @@
+# version 2.0.0
+
+# each worker requires about 8GB of GPU memory
+workers: 3
+
+# Ensemble parameters
+# More folds tend to increase accuracy, but the fine-tuning process will take longer.
+ensemble_folds: 5
+
+# Transformer parameters
+# The parameters are automatically passed to run_glue.py .
+# Keys and values are processed according to the "preprocess" function inside run_train.py.
+# Some hardcoded parameters do not appear below; please refer to build_settings.py for more details.
+
+english_model: {
+  "model_type": " roberta",
+  "model_name_or_path": " roberta-large",
+  "do_train": " ",
+  "do_eval": " ",
+  "logging_steps": " 400",
+  "save_steps": " 3000",
+  "max_seq_length": "=128",
+  "learning_rate": " 1e-5",
+  "per_gpu_eval_batch_size": "=1",
+  "per_gpu_train_batch_size": "=1",
+  "gradient_accumulation_steps": "=16",
+  "num_train_epochs": " 11.0",
+  "warmup_steps": "=120"
+}
+
+portuguese_model: {
+  "model_type": " bert",
+  "model_name_or_path": " neuralmind/bert-large-portuguese-cased",
+  "do_train": " ",
+  "do_eval": " ",
+  "logging_steps": " 400",
+  "save_steps": " 3000",
+  "max_seq_length": "=128",
+  "learning_rate": " 2e-5",
+  "num_train_epochs": " 4.0",
+  "per_gpu_eval_batch_size": "=1",
+  "per_gpu_train_batch_size": "=1",
+  "gradient_accumulation_steps": "=8"
+}
+
+# Experimental parameters
+# The parameters below are reserved for future versions of this repository.
+# Changing them now will likely cause errors.
+
+# if evaluate_ensemble is false, all models will be only individually evaluated.
+evaluate_ensemble: true
+
+# if evaluate_english_model is false, English models will be ignored.
+evaluate_english_model: true
+
+# if evaluate_portuguese_model is false, Portuguese models will be ignored.
+evaluate_portuguese_model: true
