@@ -31,10 +31,15 @@ Depending on your resources, you may want change the maximum amount of parallel 
 
 All intermediate files are deleted by default, and the final submissions will be stored in a folder called `submission_<timestamp>`, where `<timestamp>` stands for the system time when the fine-tuning procedure started.
 
+
+## Associated Repositories
+
+You may want to take a look at the [ruanchaves/elmo](https://github.com/ruanchaves/elmo) repository. It contains tests which were performed with ELMo and Portuguese word embeddings on the ASSIN datasets.
+
 ## Citation
 
 ```
-@inproceedings{assin2,
+@inproceedings{rodrigues_assin2,
 Author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares },
 Booktitle = {Proceedings of the {ASSIN 2} Shared Task: {E}valuating {S}emantic {T}extual {S}imilarity and {T}extual {E}ntailment in {P}ortuguese},
 Pages = {[In this volume]},
