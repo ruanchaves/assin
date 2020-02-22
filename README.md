@@ -9,7 +9,7 @@ At that time, a submission produced by this code achieved the best scores among 
 
 * [STIL 2019 Presentation](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf)
 
-The complete test results of all our experiments are in the file `reports/full_report.csv`. 
+The complete test results of all our experiments are in the file [`reports/full_report.csv`](reports/full_report.csv). 
 
 ## Setup
 
