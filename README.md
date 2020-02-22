@@ -7,7 +7,9 @@ that happened in 2019 during the [Symposium in Information and Human Language Te
 
 At that time, a submission produced by this code achieved the best scores among all submissions for the entailment task. This particular submission can be reproduced by the file `settings/roberta-bert-multilingual-5folds.yml`. 
 
-You may also want to read the current version of [our presentation slides](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf). A paper and a brief blog post on our findings are currently in the works.
+* [STIL 2019 Presentation](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf)
+
+The complete test results of all our experiments are in the file `reports/full_report.csv`. 
 
 ## Setup
 
@@ -31,17 +33,13 @@ All intermediate files are deleted by default, and the final submissions will be
 
 ## Citation
 
-A paper about our findings is planned to be released this year. 
-Until then, you may cite this very repository: 
-
 ```
-@misc{Rodrigues2019,
-  author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares},
-  title = {ASSIN},
-  year = {2019},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/ruanchaves/assin}},
-  commit = {f8c3f185fb3bcd106c8a0e5a12d9ef2c6119ec74}
-}
+@inproceedings{assin2,
+Author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares },
+Booktitle = {Proceedings of the {ASSIN 2} Shared Task: {E}valuating {S}emantic {T}extual {S}imilarity and {T}extual {E}ntailment in {P}ortuguese},
+Pages = {[In this volume]},
+Publisher = {CEUR-WS.org},
+Series = {{CEUR} Workshop Proceedings},
+Title = {Multilingual Transformer Ensembles for Portuguese Natural Language Tasks},
+Year = {2020}}
 ```
