@@ -7,7 +7,7 @@ that happened in 2019 during the [Symposium in Information and Human Language Te
 
 At that time, a submission produced by this code achieved the best scores among all submissions for the entailment task. This particular submission can be reproduced by the file `settings/roberta-bert-multilingual-5folds.yml`. 
 
-We described our approach in the paper “Multilingual Transformer Ensembles for Portuguese Natural Language Tasks”.
+We described our approach in the paper “[Multilingual Transformer Ensembles for Portuguese Natural Language Tasks](http://ceur-ws.org/Vol-2583/3_DLB.pdf)”.
 
 * [STIL 2019 Presentation](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf)
 
