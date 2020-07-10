@@ -1,4 +1,4 @@
-Multilingual Transformer Ensembles for Portuguese Natural Language Tasks
+[Multilingual Transformer Ensembles for Portuguese Natural Language Tasks](http://ceur-ws.org/Vol-2583/3_DLB.pdf)
 =================
 
 This is the source code for the model that has been submitted by the Deep Learning Brasil team to the 
