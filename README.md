@@ -13,7 +13,10 @@ We described our approach in the paper “Multilingual Transformer Ensembles for
 
 * [PROPOR 2020 Presentation](https://github.com/ruanchaves/assin/blob/master/PROPOR2020_presentation.pdf)
 
-* [Blog post](https://ruanchaves.github.io/multilingual-transformer-ensembles/)
+* [Proceedings of the ASSIN 2 Shared Task: Evaluating Semantic Textual Similarity and Textual Entailment in Portuguese
+co-located with XII Symposium in Information and Human Language Technology (STIL 2019)](http://ceur-ws.org/Vol-2583/)
+
+* [Multilingual Transformer Ensembles for Portuguese Natural Language Tasks](http://ceur-ws.org/Vol-2583/3_DLB.pdf)
 
 The complete test results of all our experiments are in the file [`reports/full_report.csv`](reports/full_report.csv). 
 
